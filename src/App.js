@@ -1,9 +1,10 @@
-
+import { motion } from 'framer-motion'
+import Navbar from './components/Navbar';
 
 function App() {
   return (
     <div className="App">
-      <h1 className="text-3xl">Initial</h1>
+      <Navbar/>
     </div>
   );
 }
