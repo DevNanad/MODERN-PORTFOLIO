@@ -16,7 +16,7 @@ function Navbar() {
             />
         </motion.div>
 
-        <motion.ul className='navlinks flex justify-between items-center gap-10 px-10 tracking-widest text-sm md:text-base'
+        <motion.ul className='roboto flex justify-between items-center gap-10 px-10 tracking-widest text-sm md:text-base'
         initial={{x: '100vw'}}
         animate={{x: 0}}
         transition={{type: 'spring', stiffness: 90, delay: 0.5}}
