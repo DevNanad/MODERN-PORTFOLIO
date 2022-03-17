@@ -4,7 +4,7 @@ import {motion} from 'framer-motion'
 
 function Navbar() {
   return (
-    <nav className='flex justify-around items-center pt-8 text-white'>
+    <nav className='flex justify-around items-center pt-8 pl-5 text-white'>
 
         <motion.div className="logo w-14"
         initial={{y: -100, opacity: 0}}
@@ -16,7 +16,7 @@ function Navbar() {
             />
         </motion.div>
 
-        <motion.ul className='roboto flex justify-between items-center gap-10 px-10 tracking-widest text-sm md:text-base'
+        <motion.ul className='roboto flex justify-between items-center gap-5 md:gap-20 px-4 md:px-10 tracking-widest text-sm md:text-base'
         initial={{x: '100vw'}}
         animate={{x: 0}}
         transition={{type: 'spring', stiffness: 90, delay: 0.5}}

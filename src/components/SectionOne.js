@@ -4,47 +4,50 @@ import {motion} from 'framer-motion'
 
 function SectionOne() {
   return (
-    <div className="sectionOne roboto text-white grid grid-cols-3 ">
-      <div className="myname text-7xl font-bold flex items-center justify-end">
-        <motion.div className="fullname translate-x-20 -translate-y-24"
+    <div className="sectionOne roboto text-white grid grid-cols-2 md:grid-cols-3">
+      <div className="myname text-8xl md:text-7xl flex lg:items-center lg:justify-end">
+        <motion.div className="fullname  w-full lg:translate-x-28 lg:-translate-y-20"
         initial={{opacity: 0}}
         animate={{opacity: 1}}
         transition={{delay: 0.5}}
         >
-          <p>Menard</p>
-          <p className="translate-x-10">Pajares.</p>
+          <p className="uppercase invisible lg:visible lg:normal-case">Menard</p>
+          <p className="uppercase tracking-widest text-center visible lg:invisible lg:uppercase lg:hidden">M  E</p>
+          <p className="uppercase tracking-widest text-center visible lg:invisible lg:uppercase lg:hidden">N  A</p>
+          <p className="uppercase tracking-widest text-center visible lg:invisible lg:uppercase lg:hidden">R  D</p>
+          <p className="translate-x-10 invisible lg:visible">Pajares.</p>
         </motion.div>
       </div>
       <div className="me-design z-10 relative">
-        <motion.img src={me} alt="Me" className="h-11/12"
+        <motion.img src={me} alt="Me" className="h-11/12 translate-y-32 scale-150 md:transform-none "
         initial={{opacity: 0}}
         animate={{opacity: 1}}
         transition={{delay: 0.5}}
          />
-        <motion.div className="circle-big circle inline-block absolute bottom-0"
+        <motion.div className="circle-big circle hidden sm:inline-block absolute bottom-0"
         initial={{y: 200, opacity: 0}}
         animate={{y: 50, x: -20, opacity: 1}}
         transition={{delay: 0.8, type: 'tween'}}></motion.div>
-        <motion.div className="circle-small circle inline-block absolute bottom-0 right-0"
-        initial={{y: 200, opacity: 0}}
-        animate={{y: 0, x: 190, opacity: 1}}
+        <motion.div className="circle-small circle hidden sm:inline-block absolute bottom-0 right-0"
+        initial={{opacity: 0}}
+        animate={{opacity: 1}}
         transition={{delay: 1, type: 'tween'}}></motion.div>
       </div>
-      <motion.div className="little-info flex self-center flex-col leading-5 pl-5 font-semibold tracking-widest relative"
+      <motion.div className="little-info flex md:self-end lg:self-center flex-col leading-5 px-7 font-semibold tracking-widest relative invisible md:visible"
       initial={{y: 100, opacity: 0}}
       animate={{y: 0, opacity: 1}}
       transition={{delay: 0.5}}
       >
-        <h6 className="text-sm paintedblue">Web Developer</h6>
-        <h4 className="pt-4 pb-6 font-medium">
+        <h6 className="text-sm paintedblue sm:text-xs">Web Developer</h6>
+        <h4 className="pt-4 pb-6 sm:pt-2 font-medium sm:text-sm lg:pr-36">
           Based in Philippines, I'm an aspiring full-stack developer.
         </h4>
-        <h4 className="paintedblue underline text-lg">My Story</h4>
+        <h4 className="paintedblue underline text-lg sm:text-sm">My Story</h4>
 
         <div className="triangle flex self-end">
           <svg
-            width="71"
-            height="74"
+            width="50"
+            height="53"
             viewBox="0 0 71 74"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"

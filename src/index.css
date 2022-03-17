@@ -1,11 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto:wght@400;500;700;900&display=swap');
 
 body{
     background-color: #292C35;
+    overflow-x: hidden;
+    
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #292C35; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgba(63, 99, 207, 0.151); 
+    border-radius: 20px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
 .roboto{
     font-family: 'Roboto', sans-serif;
 }
@@ -30,4 +54,7 @@ body{
     z-index: -20;
 }
 
+.fullname{
+    font-family: 'Abril Fatface', cursive;
+}
 
