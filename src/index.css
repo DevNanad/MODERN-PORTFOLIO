@@ -96,3 +96,27 @@ body{
   background-clip: text;
   font-weight: bold;
 }
+
+/*xs*/
+@media (max-width: 580px) { 
+  .hello-container{
+    transform: translateY(-10%);
+  }
+  
+ }
+@media (max-width: 400px) { 
+  .hello-container{
+    transform: translateY(-90%);
+    height: 80vh;
+    overflow-y: scroll;
+  }
+  .hello-container p:nth-child(1){
+    text-indent: 0rem;
+  }
+  .hello-image{
+    display: none;
+  }
+  .logo-line{
+    display: none;
+  }
+ }

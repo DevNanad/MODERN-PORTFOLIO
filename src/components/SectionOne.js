@@ -4,7 +4,7 @@ import {motion} from 'framer-motion'
 
 function SectionOne() {
   return (
-    <div className="sectionOne roboto text-white grid grid-cols-2 md:grid-cols-3">
+    <div className="sectionOne roboto overflow-hidden text-white grid grid-cols-2 md:grid-cols-3">
       <div className="myname text-8xl md:text-7xl flex lg:items-center lg:justify-end">
         <motion.div className="fullname  w-full lg:translate-x-28 lg:-translate-y-20"
         initial={{opacity: 0}}
@@ -12,14 +12,14 @@ function SectionOne() {
         transition={{delay: 0.5}}
         >
           <p className="uppercase invisible lg:visible lg:normal-case">Menard</p>
-          <p className="uppercase tracking-widest text-center visible lg:invisible lg:uppercase lg:hidden">M  E</p>
-          <p className="uppercase tracking-widest text-center visible lg:invisible lg:uppercase lg:hidden">N  A</p>
-          <p className="uppercase tracking-widest text-center visible lg:invisible lg:uppercase lg:hidden">R  D</p>
+          <p className="uppercase tracking-widest text-left pl-5 md:text-center visible lg:invisible lg:uppercase lg:hidden">M  E</p>
+          <p className="uppercase tracking-widest text-left pl-5 md:text-center visible lg:invisible lg:uppercase lg:hidden">N  A</p>
+          <p className="uppercase tracking-widest text-left pl-5 md:text-center visible lg:invisible lg:uppercase lg:hidden">R  D</p>
           <p className="translate-x-10 invisible lg:visible">Pajares.</p>
         </motion.div>
       </div>
       <div className="me-design z-10 relative">
-        <motion.img src={me} alt="Me" className="h-11/12 translate-y-32 scale-150 md:transform-none "
+        <motion.img src={me} alt="Me" className="h-11/12 translate-y-32 -translate-x-3 scale-150 md:transform-none "
         initial={{opacity: 0}}
         animate={{opacity: 1}}
         transition={{delay: 0.5}}
@@ -33,7 +33,7 @@ function SectionOne() {
         animate={{opacity: 1}}
         transition={{delay: 1, type: 'tween'}}></motion.div>
       </div>
-      <motion.div className="little-info flex md:self-end lg:self-center flex-col leading-5 px-7 font-semibold tracking-widest relative invisible md:visible"
+      <motion.div className="little-info flex md:self-end lg:self-center flex-col leading-5 px-7 font-semibold tracking-widest relative invisible md:visible md:pb-20"
       initial={{y: 100, opacity: 0}}
       animate={{y: 0, opacity: 1}}
       transition={{delay: 0.5}}
@@ -44,10 +44,10 @@ function SectionOne() {
         </h4>
         <h4 className="paintedblue underline text-lg sm:text-sm">My Story</h4>
 
-        <div className="triangle flex self-end">
+        <div className="triangle flex self-end z-40">
           <svg
-            width="50"
-            height="53"
+            width="40"
+            height="43"
             viewBox="0 0 71 74"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
