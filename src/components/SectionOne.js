@@ -4,9 +4,9 @@ import {motion} from 'framer-motion'
 
 function SectionOne() {
   return (
-    <div className="sectionOne roboto overflow-hidden text-white grid grid-cols-2 md:grid-cols-3">
-      <div className="myname text-8xl md:text-7xl flex lg:items-center lg:justify-end">
-        <motion.div className="fullname  w-full lg:translate-x-28 lg:-translate-y-20"
+    <div className="sectionOne roboto text-white grid grid-cols-2 md:grid-cols-3">
+      <div className="myname relative text-8xl md:text-7xl flex lg:items-center lg:justify-end">
+        <motion.div className="fullname overflow-hidden lg:p-5 lg:pb-10 lg:translate-x-20 lg:-translate-y-20 "
         initial={{opacity: 0}}
         animate={{opacity: 1}}
         transition={{delay: 0.5}}
@@ -18,8 +18,8 @@ function SectionOne() {
           <p className="translate-x-10 invisible lg:visible">Pajares.</p>
         </motion.div>
       </div>
-      <div className="me-design z-10 relative">
-        <motion.img src={me} alt="Me" className="h-11/12 translate-y-32 -translate-x-3 scale-150 md:transform-none "
+      <div className="me-design z-20 relative">
+        <motion.img src={me} alt="Me" className=" h-11/12 translate-y-32 -translate-x-3 scale-150 md:transform-none "
         initial={{opacity: 0}}
         animate={{opacity: 1}}
         transition={{delay: 0.5}}
@@ -33,10 +33,10 @@ function SectionOne() {
         animate={{opacity: 1}}
         transition={{delay: 1, type: 'tween'}}></motion.div>
       </div>
-      <motion.div className="little-info flex md:self-end lg:self-center flex-col leading-5 px-7 font-semibold tracking-widest relative invisible md:visible md:pb-20"
+      <motion.div className="little-info flex md:self-end lg:self-center flex-col leading-5 px-7 font-semibold tracking-widest relative invisible md:visible md:pb-32"
       initial={{y: 100, opacity: 0}}
       animate={{y: 0, opacity: 1}}
-      transition={{delay: 0.5}}
+      transition={{delay: 2}}
       >
         <h6 className="text-sm paintedblue sm:text-xs">Web Developer</h6>
         <h4 className="pt-4 pb-6 sm:pt-2 font-medium sm:text-sm lg:pr-36">
