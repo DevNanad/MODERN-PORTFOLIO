@@ -57,9 +57,7 @@ body{
     font-family: 'Abril Fatface', cursive;
 }
 
-.hello-container{
-  background-color: #1B1D28;
-}
+
 .hello-container p{
   padding-top: 20px;
   padding-right: 10px;
@@ -179,16 +177,3 @@ body{
 
  }
 
- /*Arrow Down Blue*/
- .arrowdown{
-   animation: balllike 1s infinite alternate;
- }
-
- @keyframes balllike {
-   from{
-     transform: translateY(-5px);
-   }
-   to{
-     transform: translateY(5px);
-   }
- }

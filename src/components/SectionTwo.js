@@ -40,7 +40,7 @@ function SectionTwo() {
 
         </div>
 
-        <div className="hello-container absolute right-0 -translate-y-[13vh] md:transform-none pl-7  lg:pl-20 pb-10 lg:pb-12 w-8/12 text-white rounded-l-2xl text-justify">
+        <div className="hello-container bg-[#1B1D28] absolute right-0 -translate-y-[13vh] md:transform-none pl-7 md:shadow-gray-500 md:drop-shadow-xl lg:pl-12 pb-10 lg:pb-12 w-8/12 text-white rounded-l-2xl text-justify">
             <div className="SectionTwo-title flex items-center lg:gap-4 py-10 ">
                 <h2 className='Hello text-5xl'>Hello</h2>
                 <span className='flex items-center scale-50 md:transform-none'>

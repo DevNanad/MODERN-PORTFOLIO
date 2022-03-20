@@ -43,9 +43,9 @@ function SectionOne() {
         <h4 className="pt-4 pb-6 sm:pt-2 font-medium sm:text-sm lg:pr-36">
           Based in Philippines, I'm an aspiring full-stack developer.
         </h4>
-        <h4 className="paintedblue underline text-md flex gap-5 items-center">My Story <HiOutlineArrowDown className="arrowdown text-3xl" /> </h4>
+        <h4 className="paintedblue underline underline-offset-2 decoration-2 text-md flex gap-5 items-center">My Story <HiOutlineArrowDown className="arrowdown animate-bounce text-3xl" /> </h4>
 
-        <div className="triangle flex self-end z-40">
+        <div className="triangle flex self-end z-40 ">
           <svg
             width="40"
             height="43"
