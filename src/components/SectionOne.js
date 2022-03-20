@@ -1,6 +1,7 @@
 import React from "react";
 import me from "../images/me.png";
 import {motion} from 'framer-motion'
+import {HiOutlineArrowDown} from 'react-icons/hi'
 
 function SectionOne() {
   return (
@@ -42,7 +43,7 @@ function SectionOne() {
         <h4 className="pt-4 pb-6 sm:pt-2 font-medium sm:text-sm lg:pr-36">
           Based in Philippines, I'm an aspiring full-stack developer.
         </h4>
-        <h4 className="paintedblue underline text-lg sm:text-sm">My Story</h4>
+        <h4 className="paintedblue underline text-md flex gap-5 items-center">My Story <HiOutlineArrowDown className="arrowdown text-3xl" /> </h4>
 
         <div className="triangle flex self-end z-40">
           <svg

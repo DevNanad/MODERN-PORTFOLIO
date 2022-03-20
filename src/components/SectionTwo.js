@@ -1,8 +1,12 @@
 import React from 'react'
 import hellome from '../images/hellome.png'
 import { motion } from 'framer-motion'
+import { useInView } from 'react-intersection-observer';
+import stylecss from '../index.css'
 
 function SectionTwo() {
+  const { ref:showRef, inView:showIsvisible } = useInView();
+
   return (
     <motion.div className='SectionTwo z-30 relative poppins'
     initial={{y: 0, opacity: 0}}
@@ -36,7 +40,7 @@ function SectionTwo() {
 
         </div>
 
-        <div className="hello-container absolute right-0 -translate-y-0 pl-7  lg:pl-20 pb-10 lg:pb-12 w-8/12 text-white rounded-l-2xl text-justify">
+        <div className="hello-container absolute right-0 -translate-y-[13vh] md:transform-none pl-7  lg:pl-20 pb-10 lg:pb-12 w-8/12 text-white rounded-l-2xl text-justify">
             <div className="SectionTwo-title flex items-center lg:gap-4 py-10 ">
                 <h2 className='Hello text-5xl'>Hello</h2>
                 <span className='flex items-center scale-50 md:transform-none'>
@@ -58,9 +62,13 @@ function SectionTwo() {
             </div>
 
             
-                <p className='paragrap1 indent-16 lg:mt-16'>I'm Menard, First of all, I want to tell you that I am glad that you're here reading this. So you're here with a plan to hire me?, well you are in a perfect place, Ever since I came across the word Web Development I got really curious and search what it means, that time I was only 14 years old.</p>
-                <p >So I search and read and learn on my own using online tutorials and other resources until now I've got that thing to always seek knowledge and always learn new things.</p>
-                <p className='z-30'>And now here I am making a portfolio for anyone who wanted to hire me as their Web Developer and I won't disappoint my client and always make sure to satisfy their ego regarding in Website.</p>
+                <motion.p className='paragrap1 indent-16 lg:mt-16'
+                initial={{opacity:0}}
+                animate={{opacity:1}}
+                transition={{delay:1.5}}
+                >I'm Menard, First of all, I want to tell you that I am glad that you're here reading this. So you're here with a plan to hire me?, well you are in a perfect place, Ever since I came across the word Web Development I got really curious and search what it means, that time I was only 14 years old.</motion.p>
+                <p ref={showRef} className={`${showIsvisible ? "showtext" : ''}`} >So I search and read and learn on my own using online tutorials and other resources until now I've got that thing to always seek knowledge and always learn new things.</p>
+                <p ref={showRef} className={`${showIsvisible ? "showtext2" : ''} 'z-30`}>And now here I am making a portfolio for anyone who wanted to hire me as their Web Developer and I won't disappoint my client and always make sure to satisfy their ego regarding in Website.</p>
    
         </div>
     </motion.div>

@@ -64,7 +64,37 @@ body{
   padding-top: 20px;
   padding-right: 10px;
   font-weight: 400;
+  opacity: 0;
 }
+
+.showtext{
+  opacity: 0;
+  animation-name: showtext;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  
+}
+.showtext2{
+  opacity: 0;
+  animation-name: showtext;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+  
+}
+
+@keyframes showtext {
+  from{
+    transform: translateY(1rem);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /*Font poppins*/
 .poppins{
   font-family: 'Poppins', sans-serif;
@@ -101,7 +131,7 @@ body{
   .hello-container{
     left: 0;
     min-width: 100vw;
-    transform: translateY(-35vh);
+    transform: translateY(-40vh);
     border-radius: 2rem;
     padding-left: 0;
   }
@@ -147,4 +177,18 @@ body{
     display: none;
   }
 
+ }
+
+ /*Arrow Down Blue*/
+ .arrowdown{
+   animation: balllike 1s infinite alternate;
+ }
+
+ @keyframes balllike {
+   from{
+     transform: translateY(-5px);
+   }
+   to{
+     transform: translateY(5px);
+   }
  }
