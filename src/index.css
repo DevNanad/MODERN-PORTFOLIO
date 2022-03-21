@@ -59,8 +59,8 @@ body{
 
 
 .hello-container p{
-  padding-top: 20px;
-  padding-right: 10px;
+  padding-top: 10px;
+  padding-right: 2rem;
   font-weight: 400;
   opacity: 0;
 }

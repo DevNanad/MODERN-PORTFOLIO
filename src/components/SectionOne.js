@@ -13,9 +13,9 @@ function SectionOne() {
         transition={{delay: 0.5}}
         >
           <p className="uppercase invisible lg:visible lg:normal-case">Menard</p>
-          <p className="uppercase tracking-widest text-left pl-5 md:text-center visible lg:invisible lg:uppercase lg:hidden">M  E</p>
-          <p className="uppercase tracking-widest text-left pl-5 md:text-center visible lg:invisible lg:uppercase lg:hidden">N  A</p>
-          <p className="uppercase tracking-widest text-left pl-5 md:text-center visible lg:invisible lg:uppercase lg:hidden">R  D</p>
+          <p className="uppercase tracking-widest text-left pl-16 md:text-center visible lg:invisible lg:uppercase lg:hidden">M  E</p>
+          <p className="uppercase tracking-widest text-left pl-16 md:text-center visible lg:invisible lg:uppercase lg:hidden">N  A</p>
+          <p className="uppercase tracking-widest text-left pl-16 md:text-center visible lg:invisible lg:uppercase lg:hidden">R  D</p>
           <p className="translate-x-10 invisible lg:visible">Pajares.</p>
         </motion.div>
       </div>
