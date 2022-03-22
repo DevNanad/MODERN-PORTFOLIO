@@ -15,8 +15,8 @@ function SectionOne() {
           <p className="uppercase invisible lg:visible lg:normal-case">Menard</p>
           <p className="uppercase tracking-widest text-left pl-16 md:text-center visible lg:invisible lg:uppercase lg:hidden">M  E</p>
           <p className="uppercase tracking-widest text-left pl-16 md:text-center visible lg:invisible lg:uppercase lg:hidden">N  A</p>
-          <p className="uppercase tracking-widest text-left pl-16 md:text-center visible lg:invisible lg:uppercase lg:hidden">R  D</p>
-          <p className="translate-x-10 invisible lg:visible">Pajares.</p>
+          <p className="uppercase tracking-widest text-left pl-16 mb-20 md:text-center visible lg:invisible lg:uppercase lg:hidden">R  D</p>
+          <p className="translate-x-10 hidden lg:block">Pajares.</p>
         </motion.div>
       </div>
       <div className="me-design z-20 relative">
@@ -25,7 +25,7 @@ function SectionOne() {
         animate={{opacity: 1}}
         transition={{delay: 0.5}}
          />
-        <motion.div className="circle-big circle hidden sm:inline-block absolute bottom-0"
+        <motion.div className="circle-big circle hidden md:inline-block md:absolute md:bottom-0"
         initial={{y: 200, opacity: 0}}
         animate={{y: 50, x: -20, opacity: 1}}
         transition={{delay: 0.8, type: 'tween'}}></motion.div>
@@ -34,7 +34,7 @@ function SectionOne() {
         animate={{opacity: 1}}
         transition={{delay: 1, type: 'tween'}}></motion.div>
       </div>
-      <motion.div className="little-info flex md:self-end lg:self-center flex-col leading-5 px-7 font-semibold tracking-widest relative invisible md:visible md:pb-32"
+      <motion.div className="little-info hidden md:flex md:self-end lg:self-center flex-col leading-5 px-7 font-semibold tracking-widest relative invisible md:visible md:pb-32"
       initial={{y: 100, opacity: 0}}
       animate={{y: 0, opacity: 1}}
       transition={{delay: 2}}

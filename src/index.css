@@ -58,6 +58,7 @@ body{
 }
 
 
+
 .hello-container p{
   padding-top: 10px;
   padding-right: 2rem;
@@ -129,7 +130,6 @@ body{
   .hello-container{
     left: 0;
     min-width: 100vw;
-    transform: translateY(-40vh);
     border-radius: 2rem;
     padding-left: 0;
   }
@@ -145,6 +145,7 @@ body{
   .hello-container p{
     padding-right: 1.5rem;
     padding-left: 1rem;
+    font-size: small;
   }
   .SectionTwo-title{
     justify-content: center;
@@ -164,6 +165,9 @@ body{
     font-size: 9rem;
     text-align: center;
   }
+  .fullname p:nth-child(4){
+    margin-bottom: 0;
+  }
   .paragraph1{
     text-indent: 0;
     font-size: 13px;
@@ -173,6 +177,9 @@ body{
   }
   .me-design{
     display: none;
+  }
+  .SectionOne{
+    display: block;
   }
 
  }

@@ -3,7 +3,9 @@ import {motion} from 'framer-motion'
 
 function Midnavbar() {
   return (
-    <div className='midnav relative text-xl text-white -translate-y-[4rem] md:-translate-y-[5rem] lg:-translate-y-[8rem]'
+    <motion.div className='midnav relative text-xl text-white'
+    initial={{x:'100vw'}}
+    animate={{x: 0}}
     >
         <nav className='flex justify-around lg:mt-2'>
             <span><a href="#">About</a></span>
@@ -12,7 +14,7 @@ function Midnavbar() {
             <span><a href="#">Design</a></span>
             <span><a href="#">Solution</a></span>
         </nav>
-    </div>
+    </motion.div>
   )
 }
 
