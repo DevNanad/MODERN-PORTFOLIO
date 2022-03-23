@@ -5,9 +5,7 @@ import {motion} from 'framer-motion'
 function Midnavbar() {
 
   return (
-    <motion.div className=' sticky top-0 midnav text-md text-xl text-white'
-    initial={{x:'100vw'}}
-    animate={{x: 0}}
+    <div className=' sticky top-0 midnav text-md text-xl text-white'
     >
         <nav className='flex justify-around bg-white/5 poppins '>
             <span className='p-4'>About</span>
@@ -16,7 +14,7 @@ function Midnavbar() {
             <span className='p-4'>Design</span>
             <span className='p-4'>Solution</span>
         </nav>
-    </motion.div>
+    </div>
   )
 }
 

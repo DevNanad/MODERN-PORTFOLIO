@@ -2,8 +2,13 @@ import React from 'react'
 
 function SectionThree() {
   return (
-    <div className='h-[50rem] flex justify-center text-xl items-center text-white'>
-        <h1>Section Three</h1>
+    <div className='flex text-xl items-center text-white'>
+        <div className="headings flex-[50%] flex flex-col justify-center items-baseline h-[90vh]">
+        <h1 className='pl-20 text-4xl leading-8 pb-5 nunito font-semibold'>Presently conquering fluency in MERN stack</h1>
+        <p className='pl-20 poppins leading-5 italic'>consist with four powerful and modern technologies</p>
+        </div>
+        <div className="i-know bg-slate-500 p-3 flex-[50%] h-[90vh]">
+        </div>
     </div>
   )
 }
