@@ -2,7 +2,7 @@ import React from 'react'
 import hellome from '../images/hellome.png'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer';
-import stylecss from '../index.css'
+
 
 function SectionTwo() {
   const { ref:showRef, inView:showIsvisible } = useInView();
@@ -70,9 +70,9 @@ function SectionTwo() {
         </svg>
       </div>
 
-      <motion.div className="hello-container grow bg-[#1B1D28] text-sm  md:transform-none pl-7 md:shadow-gray-500 md:drop-shadow-xl text-md lg:pl-12 pb-7 md:pb-5 lg:pb-[5rem] w-10/12 md:w-9/12 lg:w-9/12 text-white rounded-l-2xl text-justify"
+      <motion.div className="hello-container grow bg-[#1B1D28] text-sm  md:transform-none pl-7 md:shadow-gray-500 md:drop-shadow-xl text-md lg:pl-12 pb-4 md:pb-5 lg:pb-[5rem] w-10/12 md:w-9/12 lg:w-9/12 text-white rounded-l-2xl text-justify"
           initial={{y:0, opacity: 0}}
-          animate={{y: '-5rem', opacity: 1}}
+          animate={{y: '-2.5rem', opacity: 1}}
           transition={{type: 'tween', delay: 1}}
           >
         <div className="SectionTwo-title flex items-center lg:gap-4 py-10 md:py-5 ">
