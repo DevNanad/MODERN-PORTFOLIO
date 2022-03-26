@@ -14,7 +14,7 @@ function Midnavbar() {
 
 
   return (
-    <div ref={stickyNavRef} className={`${stickyNavRef ? 'sticky top-0' : ''} midnav text-md text-xl text-white flex z-40 ease-in`}
+    <div ref={stickyNavRef} className={`${showIsvisible ? 'sticky top-0' : ''} midnav text-md text-xl text-white flex z-40 ease-in bg-[#292C35]`}
     >   
         <div className={`logo py-3 w-full flex justify-between items-center md:hidden`}
 
@@ -24,10 +24,10 @@ function Midnavbar() {
             <FiMenu className='text-blue-300 text-2xl block md:hidden scale-150 '/>
             </div>
         </div>
-        <nav className={`${toggle ? 'transform-none ease-in duration-300 pb-4': ''} flex md:justify-around md:flex-row md:h-20 md:static bg-blue-300 w-screen fixed top-0 h-[60vh] translate-x-[100vw] md:transform-none  poppins flex-col items-center justify-end shadow-lg`} >
+        <nav className={`${toggle ? 'transform-none ease-in duration-300 pb-4': '-translate-y-[100vh] ease-out duration-300'} flex md:justify-around md:flex-row md:h-20 md:static bg-[#718BFF] md:bg-[#292C35] w-screen fixed top-0 h-[58vh] -translate-y-[100vh] md:transform-none  poppins flex-col items-center justify-end shadow-md z-50 rounded-lg`} >
 
-            <div className="btn-close w-full h-[10vh] text-center hover:shadow-md">
-              <FiX onClick={() =>setToggle(false)} className={`${!toggle ? 'rotate-180' : ''} block md:hidden cursor-pointer text-3xl w-full ` } />
+            <div onClick={() =>setToggle(false)} className="btn-close block md:hidden w-full h-[8vh] text-center hover:shadow-md">
+              <FiX className=" cursor-pointer text-3xl w-full" />
             </div>
             <span className='p-4 hover:shadow-md hover:rounded-lg w-full text-center'>About</span>
             <span className='p-4 hover:shadow-md hover:rounded-lg w-full text-center'>Mastery</span>
