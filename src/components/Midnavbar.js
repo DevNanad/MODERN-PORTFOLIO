@@ -21,7 +21,7 @@ function Midnavbar() {
         >
             <img src={logo} alt="Logo" className="h-12 ml-20"/>
             <div onClick={() => setToggle(true)} className="btn-open p-2 mr-12">
-            <FiMenu className='text-blue-300 text-2xl block md:hidden scale-150 '/>
+            <FiMenu className='text-blue-300 hover:text-blue-100 text-2xl block md:hidden scale-150 '/>
             </div>
         </div>
         <nav className={`${toggle ? 'transform-none ease-in duration-300 pb-4': '-translate-y-[100vh] ease-out duration-300'} flex md:justify-around md:flex-row md:h-20 md:static bg-[#718BFF] md:bg-[#292C35] w-screen fixed top-0 h-[58vh] -translate-y-[100vh] md:transform-none  poppins flex-col items-center justify-end shadow-md z-50 rounded-lg`} >
