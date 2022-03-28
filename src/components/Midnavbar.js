@@ -14,7 +14,7 @@ function Midnavbar() {
 
 
   return (
-    <div ref={stickyNavRef} className={`${showIsvisible ? 'sticky top-0' : ''} midnav text-md text-xl text-white flex z-40 ease-in bg-[#292C35]`}
+    <div ref={stickyNavRef} className={`${showIsvisible ? 'sticky top-0' : ''} midnav text-md text-xl text-white flex z-40 ease-in bg-[#292C35] shadow-lg`}
     >   
         <div className={`logo py-3 w-full flex justify-between items-center md:hidden`}
 
