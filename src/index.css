@@ -124,6 +124,7 @@ body{
       stroke-dashoffset: 0;
   }
 }
+
 .Hello{
   background: linear-gradient(89.82deg, #2FF3FF -20.09%, #4E6AE2 70.14%);
   -webkit-background-clip: text;
@@ -135,6 +136,8 @@ body{
 .stickychange{
   background-color: #2FF3FF;
 }
+
+
 
 
 /*xs*/
