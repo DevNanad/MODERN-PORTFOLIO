@@ -8,6 +8,10 @@ body{
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
+.midlink > .active > span{
+  display: flex;
+}
+
 
 /* width */
 ::-webkit-scrollbar {

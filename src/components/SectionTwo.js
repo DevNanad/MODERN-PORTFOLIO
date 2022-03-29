@@ -8,8 +8,7 @@ function SectionTwo() {
   const { ref:showRef, inView:showIsvisible } = useInView();
 
   return (
-    <div className="SectionTwo z-30 relative poppins flex"
-    >
+    <div className="SectionTwo z-30 relative poppins flex" >
       <div className="logo-line -left-10 -z-30 flex-none w-40">
         <svg
           width="228"
@@ -70,7 +69,7 @@ function SectionTwo() {
         </svg>
       </div>
 
-      <motion.div className="hello-container grow bg-[#1B1D28] text-sm  md:transform-none pl-7 md:shadow-gray-500 md:drop-shadow-xl text-md lg:pl-12 pb-4 md:pb-5 lg:pb-[5rem] w-10/12 md:w-9/12 lg:w-9/12 text-white rounded-l-2xl text-justify"
+      <motion.div className="hello-container grow bg-[#1B1D28] text-sm  md:transform-none pl-7 md:shadow-gray-500 md:drop-shadow-xl text-md lg:pl-12 pb-4 md:pb-5 lg:pb-[5rem] w-10/12 md:w-9/12 lg:w-9/12 text-white rounded-l-2xl text-justify" id="secHello"
           initial={{y:0, opacity: 0}}
           animate={{y: '-2.5rem', opacity: 1}}
           transition={{type: 'tween', delay: 1}}

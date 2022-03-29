@@ -16,7 +16,7 @@ function SectionThree() {
   const { ref:stickyRef, inView:showIsvisible } = useInView();
 
   return (
-    <div className=" SectionThree flex text-xl text-white h-[90vh] md:h-[150vh] flex-col md:flex-row">
+    <div className=" SectionThree flex text-xl text-white h-[90vh] md:h-[150vh] flex-col md:flex-row" id="secThree">
 
       {/*Presently Section*/}
       <div
@@ -33,7 +33,7 @@ function SectionThree() {
 
       {/*I Know Section*/}
       <div className="i-know text-gray-300 flex-[60%]  p-3  md:h-full -skew-y-1 md:transform-none shadow-xl md:shadow-none md:pr-10 md:pl-20 ">
-        <h1 className="md:pt-20 md:pb-5 md:text-center applysys md:tracking-widest md:border-b-[1px] md:border-gray-400 text-sky-400 font-bold text-xl">Current Tech Stack</h1>
+        <h1 className="md:pt-20 md:pb-5 md:text-center applysys md:tracking-widest md:border-b-[1px] md:border-gray-400 paintedblue uppercase font-bold text-xl">Current Tech Stack</h1>
 
         {/* MERN SECTION */}
 
@@ -98,7 +98,7 @@ function SectionThree() {
           <button className="shadow-lg text-sm rounded-md md:w-[4.8rem] md:h-[4.8rem] md:rounded-full mr-3">
             <FaGitAlt className="inline md:text-2xl mr-3 md:block md:text-center md:w-full"/>Git
           </button>
-          <button className="shadow-lg text-sm rounded-md md:w-[4.8rem] md:h-[4.8rem] md:rounded-full">
+          <button className="shadow-lg text-sm rounded-md md:w-[4.8rem] md:h-[4.8rem] md:rounded-full md:mr-10">
             <SiGithub className="inline md:text-2xl mr-3 md:block md:text-center md:w-full"/>Github
           </button>
         </div>

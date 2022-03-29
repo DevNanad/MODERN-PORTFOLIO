@@ -1,6 +1,7 @@
 import React from 'react'
 import logo from '../images/logo.png'
 import {motion} from 'framer-motion'
+import { Link} from "react-scroll";
 
 function Navbar() {
   return (
@@ -16,13 +17,21 @@ function Navbar() {
             />
         </motion.div>
 
-        <motion.ul className='roboto flex justify-between items-center gap-5 md:gap-20 px-4 md:px-10 tracking-widest text-sm md:text-base'
+        <motion.ul className='nav-item roboto flex justify-between items-center gap-5 md:gap-20 px-4 md:px-10 tracking-widest text-sm md:text-base z-20'
         initial={{x: '100vw'}}
         animate={{x: 0}}
         transition={{type: 'spring', stiffness: 30, delay: 0.5}}
         >
-            <li><a href="#">Projects.</a></li>
-            <li><a href="#">Say Hello.</a></li>
+            <Link>Projects.</Link>
+            <Link 
+            activeClass='active'
+            className='cursor-pointer'
+            to="secHello" 
+            smooth={true}
+            spy={true}
+            duration={600}
+            offset={-5}
+            >Say Hello</Link>
         </motion.ul>
         
     </nav>
