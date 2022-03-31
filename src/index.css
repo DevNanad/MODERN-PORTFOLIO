@@ -43,6 +43,9 @@ body{
 .paintedblue{
     color: #718BFF;
 }
+.mymaron{
+  color: #721b32;
+}
 
 .circle-big{
     width: 450px;
@@ -102,6 +105,30 @@ body{
   to{
     opacity: 1;
     transform: translateY(0);
+  }
+}
+.showyear{
+  animation: showyear 3s linear;
+}
+@keyframes showyear {
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(100px);
+  }
+}
+
+.showline{
+  animation: showline .5s linear;
+}
+
+@keyframes showline {
+  from {
+    clip-path: inset(0 0 0 100%);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
   }
 }
 
