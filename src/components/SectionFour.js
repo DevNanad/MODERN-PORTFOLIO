@@ -13,13 +13,13 @@ function SectionFour() {
     <div className='h-[200vh] text-white bg-gradient-to-b from-transparent via-[#1b1e24] to-[#0d0e11] ' id="secFour">
 
         {/*TIMELINE*/}
-        <div className=" h-[150vh] pt-36 timeline md:flex">
+        <div className=" h-[150vh] pt-36 md:timeline md:flex">
 
           {/* Left timeline */}
-        <div className="left-timeline px-10 md:flex flex-col flex-[40%] text-right">
+        <div className="md:left-timeline px-10 md:flex flex-col flex-[40%] text-right">
           
           {/* Left ONE */}
-          <div  ref={yearone} className="wrapper-timeline">
+          <div  ref={yearone} className="md:wrapper-timeline">
             <div className="first-content">
               <div className="year-title rounded-lg text-center font-bold poppins md:mb-6 bg-white text-[#616060] shadow-2xl">
                 <h2 className='text-4xl pt-3'>2014</h2>
@@ -30,7 +30,7 @@ function SectionFour() {
           </div>
 
           {/* RIGHT ONE */}
-          <div  ref={junhigh} className="wrapper-timeline">
+          <div  ref={junhigh} className="md:wrapper-timeline">
             <div className="first-content">
               <div className="year-title rounded-lg text-center font-bold poppins md:mb-6 bg-white text-[#616060] shadow-2xl">
                 <h2 className='text-4xl pt-3'>2018</h2>
@@ -41,7 +41,7 @@ function SectionFour() {
           </div>
 
           {/* Left TWO */}
-          <div  ref={senhighs} className="wrapper-timeline">
+          <div  ref={senhighs} className="md:wrapper-timeline">
             <div className="first-content">
               <div className="year-title rounded-lg text-center font-bold poppins md:mb-6 bg-white text-[#616060] shadow-2xl">
                 <h2 className='text-4xl pt-3'>2020 (March)</h2>
@@ -52,7 +52,7 @@ function SectionFour() {
           </div>
 
           {/* RIGHT TWO */}
-          <div  ref={college} className="wrapper-timeline">
+          <div  ref={college} className="md:wrapper-timeline">
             <div className="first-content">
               <div className="year-title rounded-lg text-center font-bold poppins md:mb-6 bg-white text-[#616060] shadow-2xl">
                 <h2 className='text-4xl pt-3'>2020 (August)</h2>
@@ -63,17 +63,6 @@ function SectionFour() {
           </div>
           
         </div>
-
-        {/* Bar timeline
-        <div className="bar-line w-2 h-[190vh] rounded-xl bg-[#718BFF]">
-          <span className='circlespan absolute -translate-x-3 rounded-full w-8 h-8 bg-inherit shadow-2xl'></span>
-
-          <span className={`${showIsvisible ? 'showline' : ''} linespan absolute -translate-x-10 translate-y-24 h-2 w-10 bg-[#718BFF]`}></span>
-
-          <span className={`${showSenHighSIsvisible ? 'showline' : ''} linespan absolute -translate-x-10 translate-y-[36.5rem] h-2 w-10 bg-[#718BFF]`}></span>
-
-
-        </div> */}
           
 
         </div>

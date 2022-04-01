@@ -184,6 +184,37 @@ body{
 
 
 
+/*Section Four styles*/
+.timeline{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-timeline{
+  width: 100%;
+}
+.wrapper-timeline{
+  width: 50%;
+  padding: 0 2rem;
+}
+.wrapper-timeline:nth-child(even){
+  align-self: flex-end;
+
+}
+
+.left-timeline::after{
+  content: '';
+  width: 8px;
+  min-height: 100%;
+  background: #718BFF;
+  position: absolute;
+  left: calc(50% - 4px);
+  border-radius: 5px;
+}
+
+
+
 
 /*xs*/
 @media (max-width: 519px) { 
