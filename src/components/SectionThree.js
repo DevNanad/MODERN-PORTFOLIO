@@ -32,8 +32,8 @@ function SectionThree() {
       </div>
 
       {/*I Know Section*/}
-      <div className="i-know text-gray-300 flex-[60%]  p-3  md:h-full -skew-y-1 md:transform-none shadow-xl md:shadow-none md:pr-10 md:pl-20 ">
-        <h1 className="md:pt-20 md:pb-5 md:text-center applysys md:tracking-widest md:border-b-[1px] md:border-gray-400 paintedblue uppercase font-bold text-xl">Current Tech Stack</h1>
+      <div className="i-know text-gray-300 flex-[60%] p-3 md:h-full md:transform-none shadow-xl md:shadow-none md:pr-10 md:pl-20 ">
+        <h1 className="techstacks md:pt-20 md:pb-5 md:text-center applysys md:tracking-widest md:border-b-[1px] md:border-gray-400 paintedblue uppercase font-bold text-xl">Current Tech Stack</h1>
 
         {/* MERN SECTION */}
 

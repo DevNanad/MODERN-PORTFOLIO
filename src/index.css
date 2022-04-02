@@ -98,6 +98,7 @@ body{
   color: #6ac3ff;
 }
 
+
 @keyframes showtext {
   from{
     transform: translateY(1rem);
@@ -177,6 +178,12 @@ body{
   background-clip: text;
   font-weight: bold;
 }
+.academics, .techstacks{
+  background: linear-gradient(89.82deg, #2FF3FF -20.09%, #4E6AE2 70.14%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
 
 .stickychange{
   background-color: #2FF3FF;
@@ -185,11 +192,6 @@ body{
 
 
 /*Section Four styles*/
-.timeline{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .left-timeline{
   width: 100%;
@@ -206,10 +208,20 @@ body{
 .left-timeline::after{
   content: '';
   width: 8px;
-  min-height: 100%;
+  min-height: 150vh;
   background: #718BFF;
   position: absolute;
   left: calc(50% - 4px);
+  border-radius: 5px;
+}
+
+.small-timeline::after{
+  content: '';
+  width: 8px;
+  min-height: 105%;
+  background: #718BFF;
+  position: absolute;
+  left: 1rem;
   border-radius: 5px;
 }
 
