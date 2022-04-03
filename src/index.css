@@ -108,17 +108,7 @@ body{
     transform: translateY(0);
   }
 }
-.showyear{
-  animation: showyear 3s linear;
-}
-@keyframes showyear {
-  from{
-    transform: translateX(0);
-  }
-  to{
-    transform: translateX(100px);
-  }
-}
+
 
 .showline{
   animation: showline .5s linear;
@@ -223,6 +213,20 @@ body{
   position: absolute;
   left: 1rem;
   border-radius: 5px;
+}
+
+
+.yearone{
+  animation: showyear 3s linear;
+}
+@keyframes showyear {
+  from{
+    transform: translateX(-200px);
+  }
+  to{
+    transform: translateX(0px);
+  }
+
 }
 
 

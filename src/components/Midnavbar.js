@@ -83,7 +83,20 @@ function Midnavbar() {
                 </span> 
               </Link>
 
-            <Link to="secFive" className='p-4 hover:shadow-md hover:rounded-lg w-full text-center'>Design</Link>
+            <Link 
+            to="secFive"
+            activeClass="active"
+            smooth={true}
+            spy={true}
+            duration={600}
+            offset={0}  
+            className='cursor-pointer p-4 hover:shadow-md hover:rounded-lg w-full text-center flex flex-col items-center'>
+              <p>Design</p>
+                <span className="hidden h-3 w-3">
+                    <span className="animate-ping absolute inline-flex h-3 w-3 rounded-full bg-[#2ff3ff] opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-3 w-3 bg-[#2ff3ff]"></span>
+                </span> 
+            </Link>
 
             <Link to='secSix' className='p-4 hover:shadow-md hover:rounded-lg w-full text-center'>Solution</Link>
 

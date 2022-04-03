@@ -10,9 +10,9 @@ function SectionFour() {
 
 
   return (
-    <div className='h-[180vh] md:flex md:items-center gap-20 md:flex-col md:justify-center text-white bg-gradient-to-b from-transparent via-[#1b1e24] to-[#0d0e11] ' id="secFour">
+    <div className='md:flex md:items-center gap-20 md:flex-col md:justify-center text-white bg-gradient-to-b from-transparent via-[#1b1e24] to-[#0d0e11] ' id="secFour">
         
-        <h1 className='academics pt-20 md:pt-0 text-center text-3xl md:text-4xl font-bold uppercase tracking-widest applesys'>Academics Timeline</h1>
+        <h1 className='academics pt-20 md:pt-20 text-center text-3xl md:text-4xl font-bold uppercase tracking-widest applesys'>Academics Timeline</h1>
 
 
         {/*TIMELINE*/}
@@ -30,7 +30,7 @@ function SectionFour() {
                   <h2 className='text-4xl pt-3'>2014</h2>
                   <h5 className='text-sm paintedblue pb-3'>Graduated Grade School</h5>
                 </div>
-                <p className='shadow-lg p-4 text-center'>A Government grade school for its citizen located at Zapote Las Pinas City.</p>
+                <p className='shadow-lg p-4 text-center md:text-left'>A Government grade school for its citizen located at Zapote Las Pinas City.</p>
               </div>
             </div>
 
@@ -41,7 +41,7 @@ function SectionFour() {
                   <h2 className='text-4xl pt-3'>2018</h2>
                   <h5 className='text-sm paintedblue pb-3'>Graduated Junior High School</h5>
                 </div>
-                <p className='shadow-lg p-4 text-center'>At PAA (Palawan Adventist Academy) an intitution of Christ founded to spread gospel to everyone bough of academics, located at Tacras Narra Palawan</p>
+                <p className='shadow-lg p-4 text-center md:text-left'>At PAA (Palawan Adventist Academy) an intitution of Christ founded to spread gospel to everyone bough of academics, located at Tacras Narra Palawan</p>
               </div>
             </div>
 
@@ -52,7 +52,7 @@ function SectionFour() {
                   <h2 className='text-4xl pt-3'>2020 (March)</h2>
                   <h5 className='text-sm paintedblue pb-3'>Graduated Senior High School</h5>
                 </div>
-                <p className='shadow-lg p-4 text-center'>At NLAC (Northern luzon Adventist College) an Adventist institution which value relationship with God, located at Artacho Sison Pangasinan.</p>
+                <p className='shadow-lg p-4 text-center md:text-left'>At NLAC (Northern luzon Adventist College) an Adventist institution which value relationship with God, located at Artacho Sison Pangasinan.</p>
               </div>
             </div>
 
@@ -63,7 +63,7 @@ function SectionFour() {
                   <h2 className='text-4xl pt-3'>2020 (August)</h2>
                   <h5 className='text-sm paintedblue pb-3'>Started College</h5>
                 </div>
-                <p className='shadow-lg p-4 text-center'>At TCU (Taguig City University) currently taking bachelors degree of Computer Science (BSCS)</p>
+                <p className='shadow-lg p-4 text-center md:text-left'>At TCU (Taguig City University) currently taking bachelors degree of Computer Science (BSCS)</p>
               </div>
             </div>
             
@@ -81,7 +81,7 @@ function SectionFour() {
                   <h2 className='text-4xl pt-3'>2014</h2>
                   <h5 className='text-sm paintedblue pb-3'>Graduated Grade School</h5>
                 </div>
-                <p className='shadow-lg p-4 text-center'>A Government grade school for its citizen located at Zapote Las Pinas City.</p>
+                <p className='shadow-lg p-4 text-center md:text-left'>A Government grade school for its citizen located at Zapote Las Pinas City.</p>
               </div>
             </div>
 
@@ -92,7 +92,7 @@ function SectionFour() {
                   <h2 className='text-4xl pt-3'>2018</h2>
                   <h5 className='text-sm paintedblue pb-3'>Graduated Junior High School</h5>
                 </div>
-                <p className='shadow-lg p-4 text-center'>At PAA (Palawan Adventist Academy) an intitution of Christ founded to spread gospel to everyone bough of academics, located at Tacras Narra Palawan</p>
+                <p className='shadow-lg p-4 text-center md:text-left'>At PAA (Palawan Adventist Academy) an intitution of Christ founded to spread gospel to everyone bough of academics, located at Tacras Narra Palawan</p>
               </div>
             </div>
 
@@ -103,7 +103,7 @@ function SectionFour() {
                   <h2 className='text-4xl pt-3'>2020 (March)</h2>
                   <h5 className='text-sm paintedblue pb-3'>Graduated Senior High School</h5>
                 </div>
-                <p className='shadow-lg p-4 text-center'>At NLAC (Northern luzon Adventist College) an Adventist institution which value relationship with God, located at Artacho Sison Pangasinan.</p>
+                <p className='shadow-lg p-4 text-center md:text-left'>At NLAC (Northern luzon Adventist College) an Adventist institution which value relationship with God, located at Artacho Sison Pangasinan.</p>
               </div>
             </div>
 
@@ -114,7 +114,7 @@ function SectionFour() {
                   <h2 className='text-4xl pt-3'>2020 (August)</h2>
                   <h5 className='text-sm paintedblue pb-3'>Started College</h5>
                 </div>
-                <p className='shadow-lg p-4 text-center'>At TCU (Taguig City University) currently taking bachelors degree of Computer Science (BSCS)</p>
+                <p className='shadow-lg p-4 text-center md:text-left'>At TCU (Taguig City University) currently taking bachelors degree of Computer Science (BSCS)</p>
               </div>
             </div>
             
