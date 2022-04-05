@@ -198,7 +198,7 @@ body{
 .left-timeline::after{
   content: '';
   width: 8px;
-  min-height: 150vh;
+  height: 100%;
   background: #718BFF;
   position: absolute;
   left: calc(50% - 4px);
