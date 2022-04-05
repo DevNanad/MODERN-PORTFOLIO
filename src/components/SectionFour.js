@@ -10,7 +10,7 @@ function SectionFour() {
 
 
   return (
-    <div className='md:flex md:items-center gap-20 md:flex-col md:justify-center text-white bg-gradient-to-b from-transparent via-gray-800 to-transparent poppins ' id="secFour">
+    <div className=' box-border md:flex md:items-center gap-20 md:flex-col md:justify-center text-white bg-gradient-to-b from-transparent via-gray-800 to-transparent poppins ' id="secFour">
         
         <h1 className='academics pt-20 md:pt-20 text-center text-3xl md:text-4xl font-bold uppercase tracking-widest applesys'>Academics Timeline</h1>
 
