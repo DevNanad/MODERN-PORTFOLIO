@@ -168,7 +168,7 @@ body{
   background-clip: text;
   font-weight: bold;
 }
-.academics, .techstacks{
+.academics, .techstacks , .projects{
   background: linear-gradient(89.82deg, #2FF3FF -20.09%, #4E6AE2 70.14%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -228,6 +228,9 @@ body{
   }
 
 }
+
+/* Section Five Styles */
+
 
 
 
