@@ -3,7 +3,7 @@ import proj from '../images/proj.png'
 
 function SectionFive() {
   return (
-    <div className='text-white  poppins relative top-0' id='secFive'>
+    <div className='text-white  poppins relative top-0 pb-[4rem] md:pb-[9rem]' id='secFive'>
 
       <h1 className='projects text-[3.7rem] text-center pt-28 pb-20 font-mono '>PROJECTS</h1>
       

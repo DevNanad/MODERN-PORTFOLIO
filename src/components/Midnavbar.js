@@ -103,7 +103,7 @@ function Midnavbar() {
             smooth={true}
             spy={true}
             duration={600}
-            offset={-40}  
+            offset={0}  
             className='cursor-pointer p-4 hover:shadow-md hover:rounded-lg w-full text-center flex flex-col items-center'>
               <p>Solution</p>
                 <span className="hidden h-3 w-3">
