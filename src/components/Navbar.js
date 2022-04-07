@@ -22,7 +22,16 @@ function Navbar() {
         animate={{x: 0}}
         transition={{type: 'spring', stiffness: 30, delay: 0.5}}
         >
-            <Link>Projects.</Link>
+            <Link 
+            className='cursor-pointer'
+            to="secFive"
+            activeClass="active"
+            smooth={true}
+            spy={true}
+            duration={600}
+            offset={0}  
+            >Projects.</Link>
+
             <Link 
             activeClass='active'
             className='cursor-pointer'

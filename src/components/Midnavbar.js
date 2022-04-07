@@ -1,5 +1,4 @@
-import React, { useRef, useState,useCallback,useEffect } from 'react'
-import {motion} from 'framer-motion'
+import React, { useState } from 'react'
 import { useInView } from 'react-intersection-observer';
 import {FiMenu,FiX} from 'react-icons/fi'
 import logo from '../images/logo.png'
@@ -98,7 +97,20 @@ function Midnavbar() {
                 </span> 
             </Link>
 
-            <Link to='secSix' className='p-4 hover:shadow-md hover:rounded-lg w-full text-center'>Solution</Link>
+            <Link 
+            to="secSix"
+            activeClass="active"
+            smooth={true}
+            spy={true}
+            duration={600}
+            offset={-40}  
+            className='cursor-pointer p-4 hover:shadow-md hover:rounded-lg w-full text-center flex flex-col items-center'>
+              <p>Solution</p>
+                <span className="hidden h-3 w-3">
+                    <span className="animate-ping absolute inline-flex h-3 w-3 rounded-full bg-[#2ff3ff] opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-3 w-3 bg-[#2ff3ff]"></span>
+                </span> 
+            </Link>
 
         </nav>
     </div>
