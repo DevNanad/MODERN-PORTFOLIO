@@ -208,7 +208,7 @@ body{
 .small-timeline::after{
   content: '';
   width: 8px;
-  min-height: 105%;
+  height: 75% ;
   background: #718BFF;
   position: absolute;
   left: 1rem;
