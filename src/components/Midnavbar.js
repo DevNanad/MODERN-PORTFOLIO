@@ -15,7 +15,7 @@ function Midnavbar() {
 
 
   return (
-    <div ref={stickyNavRef} className={`${showIsvisible ? 'sticky top-0' : ''} midnav text-md text-xl text-white flex z-40 ease-in bg-[#292C35] shadow-lg`}
+    <div ref={stickyNavRef} className={`${showIsvisible ? 'sticky top-0' : ''} midnav text-lg text-white flex z-40 ease-in bg-[#292C35] shadow-lg md:items-center`}
     >   
         <div className={`logo py-3 w-full flex justify-between items-center md:justify-center md:w-3/12`}
 
@@ -25,7 +25,7 @@ function Midnavbar() {
               <FiMenu className='text-blue-300 hover:text-blue-100 text-2xl block md:hidden scale-150 '/>
             </div>
         </div>
-        <nav className={`${toggle ? 'transform-none ease-in duration-300 pb-4 md:pb-0': '-translate-y-[100vh] ease-out duration-300'} midlink flex md:justify-around md:flex-row md:h-24 md:static bg-[#718BFF] md:bg-[#292C35] w-screen fixed top-0 h-[58vh] -translate-y-[100vh] md:transform-none  poppins flex-col items-center justify-end shadow-md z-50 rounded-lg`} >
+        <nav className={`${toggle ? 'transform-none ease-in duration-300 pb-4 md:pb-0': '-translate-y-[100vh] ease-out duration-300'} midlink flex md:justify-around md:flex-row md:h-[3rem] md:static bg-[#718BFF] md:bg-[#292C35] w-screen fixed top-0 h-[58vh] -translate-y-[100vh] md:transform-none  poppins flex-col items-center justify-end z-50 rounded-lg`} >
 
             <div onClick={() =>setToggle(false)} className="btn-close flex justify-around items-center md:hidden w-full h-[8vh] text-center hover:shadow-md">
               {/*Logo*/}
@@ -44,8 +44,8 @@ function Midnavbar() {
             className='cursor-pointer p-4 hover:shadow-md hover:rounded-lg w-full text-center flex flex-col items-center'>
               <p>About</p>
                 <span className="hidden h-3 w-3">
-                  <span className="animate-ping absolute inline-flex h-3 w-3 rounded-full bg-[#2ff3ff] opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-3 w-3 bg-[#2ff3ff]"></span>
+                  <span className="animate-ping absolute inline-flex h-3 w-3 rounded-full bg-[#fff] opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-[#fff]"></span>
               </span> 
             </Link>
 

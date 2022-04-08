@@ -16,7 +16,7 @@ function SectionThree() {
   const { ref:stickyRef, inView:showIsvisible } = useInView();
 
   return (
-    <div className=" SectionThree flex text-xl text-white h-[90vh] md:h-[150vh] flex-col md:flex-row" id="secThree">
+    <div className=" SectionThree pb-10 md:pb-0 flex text-xl text-white h-[90vh] md:h-[150vh] flex-col md:flex-row" id="secThree">
 
       {/*Presently Section*/}
       <div
@@ -32,7 +32,7 @@ function SectionThree() {
       </div>
 
       {/*I Know Section*/}
-      <div className="i-know text-gray-300 flex-[60%] p-3 md:h-full md:transform-none md:shadow-none md:pr-10 md:pl-20 ">
+      <div className="i-know text-gray-300 flex-[60%] px-5 md:h-full md:transform-none md:shadow-none md:pr-10 md:pl-20 ">
         <h1 className="techstacks md:pt-20 md:pb-5 md:text-center applysys md:tracking-widest md:border-b-[1px] md:border-gray-400 paintedblue uppercase font-bold text-xl">Current Tech Stack</h1>
 
         {/* MERN SECTION */}
