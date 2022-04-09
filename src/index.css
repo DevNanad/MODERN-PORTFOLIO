@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Nunito:wght@400;500;600&family=Poppins:wght@400;500;600&family=Roboto:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Nunito:wght@400;500;600&family=Poppins:wght@100;200;300;400;500;600&family=Roboto:wght@400;500;700;900&display=swap');
 
 body{
     background-color: #292C35;
@@ -228,10 +228,6 @@ body{
   }
 
 }
-
-/* Section Five Styles */
-
-
 
 
 

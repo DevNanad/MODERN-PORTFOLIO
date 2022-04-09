@@ -1,3 +1,4 @@
+import Footer from './components/Footer';
 import Midnavbar from './components/Midnavbar';
 import Navbar from './components/Navbar';
 import SectionFive from './components/SectionFive';
@@ -18,6 +19,7 @@ function App() {
       <SectionFour/>
       <SectionFive/>
       <SectionSix/>
+      <Footer/>
     </div>
   );
 }
