@@ -74,37 +74,8 @@ function SectionTwo() {
           animate={{y: '-2.5rem', opacity: 1}}
           transition={{type: 'tween', delay: 1}}
           >
-        <div className="SectionTwo-title flex items-center lg:gap-4 py-10 md:py-5 ">
-          <h2 className="Hello text-5xl">Hello</h2>
-          <span className="flex items-center scale-50 md:transform-none">
-            <svg
-              width="167"
-              height="8"
-              viewBox="0 0 167 8"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0.5 4.38727L166.498 3.50009"
-                stroke="url(#paint0_linear_112_12)"
-                strokeWidth="7"
-              />
-              <defs>
-                <linearGradient
-                  id="paint0_linear_112_12"
-                  x1="-22.5"
-                  y1="12.9997"
-                  x2="137.5"
-                  y2="7.49984"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop offset="0.130208" stopColor="#6379D9" />
-                  <stop offset="0.802083" stopColor="#2FF3FF" />
-                  <stop offset="1" stopColor="#BABEBC" stopOpacity="0" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </span>
+        <div className="SectionTwo-title px-10 py-10 md:py-8 ">
+          <h2 className="Hello text-5xl">/Hello</h2>
         </div>
         <div className="hello-flex flex flex-col md:grid lg:grid-cols-2">
           <div className="hello-image col-span-1 flex flex-col justify-center">

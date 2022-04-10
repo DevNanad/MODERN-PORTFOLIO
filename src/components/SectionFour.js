@@ -10,9 +10,9 @@ function SectionFour() {
 
 
   return (
-    <div className='box-border md:flex md:items-center gap-20 md:flex-col md:justify-center text-white bg-[#121212] rounded-bl-[5rem] poppins ' id="secFour">
+    <div className='box-border md:flex md:items-center gap-20 md:gap-10 md:flex-col md:justify-center text-white bg-[#121212] rounded-bl-[5rem] poppins ' id="secFour">
         
-        <h1 className='academics py-16 px-20 text-center text-3xl md:text-4xl font-bold uppercase tracking-widest applesys'>Academics Timeline</h1>
+        <h1 className='academics py-16 px-20 text-center text-3xl md:text-4xl font-bold uppercase tracking-widest applesys'>/Academics Timeline</h1>
 
 
         {/*TIMELINE*/}
@@ -20,7 +20,7 @@ function SectionFour() {
           
 
           {/* Large timeline */}
-          <div className="hidden left-timeline h-full px-10 md:flex flex-col justify-center flex-[40%] text-right">
+          <div className="hidden left-timeline h-full py-10 px-10 md:flex flex-col justify-center flex-[40%] text-right">
             
             
             {/* Left ONE */}

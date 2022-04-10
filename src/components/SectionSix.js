@@ -12,7 +12,7 @@ function SectionSix() {
             </div>
 
             <div className="text-message flex-[50%]">
-                <h1 className='text-white text-center text-[2rem] pt-[3rem] md:pt-0 md:text-[2.5rem] poppins font-semibold'>HIT ME UP</h1>
+                <h1 className='text-white text-center text-[2rem] pt-[3rem] md:pt-0 md:text-[2.5rem] poppins font-semibold'>/HIT ME UP</h1>
 
                 <p className='py-5 text-white poppins'>You've come to the right place, hit it and lets start our agenda partner.</p>
                 <button className='self-center bg-zinc-300 p-2 rounded-lg w-full poppins font-bold hover:bg-white text-zinc-900'>Hire Me</button>

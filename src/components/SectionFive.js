@@ -5,7 +5,7 @@ function SectionFive() {
   return (
     <div className='text-white  poppins relative top-0 pb-[4rem] md:pb-[9rem]' id='secFive'>
 
-      <h1 className='projects text-[3.7rem] text-center pt-28 pb-20 font-mono '>PROJECTS</h1>
+      <h1 className='projects text-[3.7rem] text-center pt-28 pb-20 font-mono '>/PROJECTS</h1>
       
       <div className="project-wrapper flex flex-col gap-5 md:gap-5 lg:gap-0 lg:flex-row">
 
