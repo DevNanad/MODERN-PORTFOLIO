@@ -40,7 +40,7 @@ function Navbar() {
             spy={true}
             duration={600}
             offset={-5}
-            >Say Hello</Link>
+            >Say Hello.</Link>
         </motion.ul>
         
     </nav>

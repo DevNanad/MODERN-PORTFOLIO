@@ -40,7 +40,7 @@ function SectionOne() {
       transition={{delay: 2}}
       >
         <h6 className="text-sm paintedblue sm:text-xs">Web Developer</h6>
-        <h4 className="pt-4 pb-6 sm:pt-2 font-medium sm:text-sm lg:pr-36">
+        <h4 className="pt-4 pb-5 sm:pt-2 font-medium sm:text-sm lg:pr-36">
           Based in Philippines, I'm an aspiring full-stack developer.
         </h4>
         <h4 className="paintedblue underline underline-offset-2 decoration-2 text-md flex gap-5 items-center">My Story <HiOutlineArrowDown className="arrowdown animate-bounce text-3xl" /> </h4>

@@ -80,7 +80,7 @@ function SectionTwo() {
         <div className="hello-flex flex flex-col md:grid lg:grid-cols-2">
           <div className="hello-image col-span-1 flex flex-col justify-center">
             <img src={hellome} alt="Mypic" className="h-72 self-center" />
-            <h1 className="text-center text-xl text-white tracking-wider py-2 ">
+            <h1 className="text-center text-xl text-white tracking-[.3rem] py-4 roboto font-semibold ">
               Menard M. Pajares
             </h1>
           </div>
