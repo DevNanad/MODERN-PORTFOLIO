@@ -230,6 +230,28 @@ body{
 }
 
 
+.footsvg {
+  position: relative;
+  display: block;
+  width: calc(100%);
+  fill: #171717;
+}
+.booksvg{
+  display: block;
+  height: 30px;
+  fill: transparent;
+  width: calc(100%);
+}
+
+
+.booksvg .shape-fill {
+  fill: #292C35;
+}
+.footsvg .shape-fill{
+  fill: white;
+}
+
+
 
 /*xs*/
 @media (max-width: 519px) { 

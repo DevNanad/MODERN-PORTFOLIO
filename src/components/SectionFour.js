@@ -1,16 +1,13 @@
 import React from 'react'
-import { useInView } from 'react-intersection-observer';
-import {motion} from 'framer-motion'
 
 function SectionFour() {
-  const { ref:yearone, inView:showIsvisible } = useInView();
-  const { ref:junhigh, inView:showJunHighSIsvisible } = useInView();
-  const { ref:senhighs, inView:showSenHighSIsvisible } = useInView();
-  const { ref:college, inView:showCollegeIsvisible } = useInView();
 
 
   return (
-    <div className='box-border md:flex md:items-center gap-20 md:gap-10 md:flex-col md:justify-center text-white bg-[#121212] rounded-bl-[5rem] poppins ' id="secFour">
+    <div className='box-border md:flex md:items-center gap-20 md:gap-10 md:flex-col md:justify-center text-white bg-[#171717] rounded-bl-[5rem] poppins ' id="secFour">
+      <svg className='rotate-180 booksvg' data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M602.45,3.86h0S572.9,116.24,281.94,120H923C632,116.24,602.45,3.86,602.45,3.86Z" className="shape-fill"></path>
+      </svg>
         
         <h1 className='academics py-16 px-20 text-center text-3xl md:text-4xl font-bold uppercase tracking-widest applesys'>/Academics Timeline</h1>
 
@@ -24,7 +21,7 @@ function SectionFour() {
             
             
             {/* Left ONE */}
-            <div  ref={yearone} className="wrapper-timeline">
+            <div  className="wrapper-timeline">
               <div className="first-content">
                 <div className="year-title rounded-lg text-center font-bold poppins md:mb-6 bg-white text-[#616060] shadow-2xl">
                   <h2 className='text-4xl pt-3'>2014</h2>
@@ -35,7 +32,7 @@ function SectionFour() {
             </div>
 
             {/* RIGHT ONE */}
-            <div  ref={junhigh} className="wrapper-timeline">
+            <div  className="wrapper-timeline">
               <div className="first-content">
                 <div className="year-title rounded-lg text-center font-bold poppins md:mb-6 bg-white text-[#616060] shadow-2xl">
                   <h2 className='text-4xl pt-3'>2018</h2>
@@ -46,7 +43,7 @@ function SectionFour() {
             </div>
 
             {/* Left TWO */}
-            <div  ref={senhighs} className="wrapper-timeline">
+            <div className="wrapper-timeline">
               <div className="first-content">
                 <div className="year-title rounded-lg text-center font-bold poppins md:mb-6 bg-white text-[#616060] shadow-2xl">
                   <h2 className='text-4xl pt-3'>2020 (March)</h2>
@@ -57,7 +54,7 @@ function SectionFour() {
             </div>
 
             {/* RIGHT TWO */}
-            <div  ref={college} className="wrapper-timeline">
+            <div className="wrapper-timeline">
               <div className="first-content">
                 <div className="year-title rounded-lg text-center font-bold poppins md:mb-6 bg-white text-[#616060] shadow-2xl">
                   <h2 className='text-4xl pt-3'>2020 (August)</h2>
@@ -75,7 +72,7 @@ function SectionFour() {
             <div className="flex small-timeline h-full px-10 md:hidden flex-col gap-10  justify-center flex-[40%] text-right pb-20">
             
             {/* Left ONE */}
-            <div  ref={yearone} className="smallwrapper-timeline">
+            <div className="smallwrapper-timeline">
               <div className="first-content">
                 <div className="year-title rounded-lg text-center font-bold poppins md:mb-6 bg-white text-[#616060] shadow-2xl">
                   <h2 className='text-3xl pt-3'>2014</h2>
@@ -86,7 +83,7 @@ function SectionFour() {
             </div>
 
             {/* RIGHT ONE */}
-            <div  ref={junhigh} className="smallwrapper-timeline">
+            <div className="smallwrapper-timeline">
               <div className="first-content">
                 <div className="year-title rounded-lg text-center font-bold poppins md:mb-6 bg-white text-[#616060] shadow-2xl">
                   <h2 className='text-3xl pt-3'>2018</h2>
@@ -97,7 +94,7 @@ function SectionFour() {
             </div>
 
             {/* Left TWO */}
-            <div  ref={senhighs} className="smallwrapper-timeline">
+            <div className="smallwrapper-timeline">
               <div className="first-content">
                 <div className="year-title rounded-lg text-center font-bold poppins md:mb-6 bg-white text-[#616060] shadow-2xl">
                   <h2 className='text-3xl pt-3'>2020 (March)</h2>
@@ -108,7 +105,7 @@ function SectionFour() {
             </div>
 
             {/* RIGHT TWO */}
-            <div  ref={college} className="smallwrapper-timeline">
+            <div className="smallwrapper-timeline">
               <div className="first-content">
                 <div className="year-title rounded-lg text-center font-bold poppins md:mb-6 bg-white text-[#616060] shadow-2xl">
                   <h2 className='text-3xl pt-3'>2020 (August)</h2>

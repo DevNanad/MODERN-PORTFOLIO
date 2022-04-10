@@ -11,6 +11,7 @@ import { SiExpress,
   SiFirebase,
   SiMicrosoftaccess,
   SiGithub } from "react-icons/si"
+  
 
 function SectionThree() {
   const { ref:stickyRef, inView:showIsvisible } = useInView();
@@ -32,7 +33,7 @@ function SectionThree() {
       </div>
 
       {/*I Know Section*/}
-      <div className="i-know text-zinc-700 flex-[60%] px-5 py-10 md:mt-10 md:h-[140vh] md:transform-none md:shadow-none md:pr-10 md:pl-20 bg-white rounded-[4rem] ">
+      <div className="i-know text-zinc-800 flex-[60%] px-5 py-10 md:mt-10 md:h-[140vh] md:transform-none md:shadow-none md:pr-10 md:mr-3 md:pl-20 bg-white rounded-[3.5rem] ">
         <h1 className="techstacks md:pt-[6rem] py-6 md:pb-5 md:text-center applysys md:tracking-[1rem] paintedblue uppercase font-bold text-xl">/Current Tech Stack</h1>
 
         {/* MERN SECTION */}
