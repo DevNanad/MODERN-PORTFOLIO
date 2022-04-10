@@ -3,7 +3,7 @@ import messageme from '../images/man.png'
 
 function SectionSix() {
   return (
-    <div className='min-h-[100vh] bg-[#171717] flex justify-center items-center py-20 md:py-16 px-10' id='secSix'>
+    <div className='min-h-[100vh] bg-[#171717] flex justify-center items-center py-20 md:py-16 px-10 rounded-tr-[5rem]' id='secSix'>
 
         <div className="wrapper-message flex flex-col items-center md:justify-center md:gap-10 md:flex-row">
 
