@@ -9,12 +9,12 @@ function SectionFour() {
         <path d="M602.45,3.86h0S572.9,116.24,281.94,120H923C632,116.24,602.45,3.86,602.45,3.86Z" className="shape-fill"></path>
       </svg>
         
-        <h1 className='academics py-16 px-20 text-center text-3xl md:text-4xl font-bold uppercase tracking-widest applesys'>/Academics Timeline</h1>
+        <h1 className='academics py-10 px-20 text-center text-3xl md:text-4xl font-bold uppercase tracking-widest applesys'>/Academics Timeline</h1>
 
 
         {/*TIMELINE*/}
-        <div className="timeline py-10">
-        <div className="line-large absolute hidden md:block h-full md:left-[50%] -translate-x-[4px]"></div>
+        <div className="timeline py-10 relative overflow-hidden">
+        <div className="line-large absolute hidden md:block h-[130vh] md:left-[50%] -translate-x-[4px]"></div>
 
           {/* Large timeline */}
           <div className="hidden left-timeline h-full py-10 px-10 md:flex flex-col justify-center flex-[40%] text-right">
@@ -22,11 +22,11 @@ function SectionFour() {
             
             
             {/* Left ONE */}
-            <div  className="wrapper-timeline bg-red-300">
+            <div  className="wrapper-timeline ">
 
               
-              <div className="first-content">
-                <div className="year-title rounded-lg text-center font-bold poppins md:mb-6 bg-white text-[#616060] shadow-2xl">
+              <div className="first-content relative ">
+                <div className="left-title rounded-lg text-center font-bold poppins md:mb-6 bg-white text-[#616060] shadow-2xl">
                   <h2 className='text-4xl pt-3'>2014</h2>
                   <h5 className='text-sm paintedblue pb-3 md:tracking-widest'>Graduated Grade School</h5>
                 </div>
@@ -36,8 +36,8 @@ function SectionFour() {
 
             {/* RIGHT ONE */}
             <div  className="wrapper-timeline">
-              <div className="first-content">
-                <div className="year-title rounded-lg text-center font-bold poppins md:mb-6 bg-white text-[#616060] shadow-2xl">
+              <div className="first-content relative">
+                <div className="left-title rounded-lg text-center font-bold poppins md:mb-6 bg-white text-[#616060] shadow-2xl">
                   <h2 className='text-4xl pt-3'>2018</h2>
                   <h5 className='text-sm paintedblue pb-3 md:tracking-widest'>Graduated Junior High School</h5>
                 </div>
@@ -47,8 +47,8 @@ function SectionFour() {
 
             {/* Left TWO */}
             <div className="wrapper-timeline">
-              <div className="first-content">
-                <div className="year-title rounded-lg text-center font-bold poppins md:mb-6 bg-white text-[#616060] shadow-2xl">
+              <div className="first-content relative">
+                <div className="left-title rounded-lg text-center font-bold poppins md:mb-6 bg-white text-[#616060] shadow-2xl">
                   <h2 className='text-4xl pt-3'>2020 (March)</h2>
                   <h5 className='text-sm paintedblue pb-3 md:tracking-widest'>Graduated Senior High School</h5>
                 </div>
@@ -58,8 +58,8 @@ function SectionFour() {
 
             {/* RIGHT TWO */}
             <div className="wrapper-timeline">
-              <div className="first-content">
-                <div className="year-title rounded-lg text-center font-bold poppins md:mb-6 bg-white text-[#616060] shadow-2xl">
+              <div className="first-content relative">
+                <div className="left-title rounded-lg text-center font-bold poppins md:mb-6 bg-white text-[#616060] shadow-2xl">
                   <h2 className='text-4xl pt-3'>2020 (August)</h2>
                   <h5 className='text-sm paintedblue pb-3 md:tracking-widest'>Started College</h5>
                 </div>
