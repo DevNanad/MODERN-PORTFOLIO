@@ -211,6 +211,19 @@ body{
   background-color: inherit;
 }
 
+/* timelinemess */
+
+.year-title::after{
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  position: absolute;
+  top: calc(50% - 10px);
+  left: -10px;
+  transform: rotate(45deg);
+}
+
 
 .yearone{
   animation: showyear 3s linear;
@@ -246,6 +259,7 @@ body{
 .footsvg .shape-fill{
   fill: white;
 }
+
 
 
 

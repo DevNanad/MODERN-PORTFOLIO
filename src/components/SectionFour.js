@@ -75,11 +75,11 @@ function SectionFour() {
               <div className="line-large relative left-4 h-full"></div>
 
               {/* Small timeline */}
-              <div className="flex small-timeline h-full p-10 flex-col gap-10  justify-center flex-[40%] text-right">
+              <div className="flex small-timeline h-full py-10 px-8 flex-col gap-10  justify-center flex-[40%] text-right">
               
                 {/* Left ONE */}
                 <div className="smallwrapper-timeline">
-                  <div className="first-content">
+                  <div className="first-content relative">
                     <div className="year-title rounded-lg text-center font-bold poppins md:mb-6 bg-white text-[#616060] shadow-2xl">
                       <h2 className='text-3xl pt-3'>2014</h2>
                       <h5 className='text-sm paintedblue pb-3 md:tracking-widest'>Graduated Grade School</h5>
@@ -90,7 +90,7 @@ function SectionFour() {
 
                 {/* RIGHT ONE */}
                 <div className="smallwrapper-timeline">
-                  <div className="first-content">
+                  <div className="first-content relative">
                     <div className="year-title rounded-lg text-center font-bold poppins md:mb-6 bg-white text-[#616060] shadow-2xl">
                       <h2 className='text-3xl pt-3'>2018</h2>
                       <h5 className='text-sm paintedblue pb-3 md:tracking-widest'>Graduated Junior High School</h5>
@@ -101,7 +101,7 @@ function SectionFour() {
 
                 {/* Left TWO */}
                 <div className="smallwrapper-timeline">
-                  <div className="first-content">
+                  <div className="first-content relative">
                     <div className="year-title rounded-lg text-center font-bold poppins md:mb-6 bg-white text-[#616060] shadow-2xl">
                       <h2 className='text-3xl pt-3'>2020 (March)</h2>
                       <h5 className='text-sm paintedblue pb-3 md:tracking-widest'>Graduated Senior High School</h5>
@@ -112,7 +112,7 @@ function SectionFour() {
 
                 {/* RIGHT TWO */}
                 <div className="smallwrapper-timeline">
-                  <div className="first-content">
+                  <div className="first-content relative">
                     <div className="year-title rounded-lg text-center font-bold poppins md:mb-6 bg-white text-[#616060] shadow-2xl">
                       <h2 className='text-3xl pt-3'>2020 (August)</h2>
                       <h5 className='text-sm paintedblue pb-3 md:tracking-widest'>Started College</h5>
