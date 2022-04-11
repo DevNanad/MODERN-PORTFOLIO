@@ -195,24 +195,20 @@ body{
 
 }
 
-.left-timeline::after{
-  content: '';
+.line-large{
   width: 8px;
-  height: 100%;
   background: #718BFF;
-  position: absolute;
-  left: calc(50% - 4px);
   border-radius: 5px;
 }
-
-.small-timeline::after{
+.line-large::after{
   content: '';
-  width: 8px;
-  height: 75% ;
-  background: #718BFF;
   position: absolute;
-  left: 1rem;
-  border-radius: 5px;
+  top: 0;
+  transform: translateX(-.5rem);
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: inherit;
 }
 
 
