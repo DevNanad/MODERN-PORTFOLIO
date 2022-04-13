@@ -1,10 +1,14 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import proj from '../images/proj.png'
 import {motion} from 'framer-motion'
 
 function SectionFive() {
 
   const [latestOpen, setLatestOpen] = useState(false)
+
+  useEffect(()=>{
+    console.log("rerendered");
+  },[latestOpen])
 
   return (
     <div
@@ -23,17 +27,17 @@ function SectionFive() {
           </h1>
           <motion.div
             layout
-            transition={{ layout: { duration: 1, type: "spring" } }}
+            transition={{ layout: { duration: .5, type: "tween" } }}
             onClick={() => setLatestOpen(!latestOpen)}
             className={`${
               latestOpen
-                ? "absolute top-[12rem] left-0 justify-center w-full flex flex-col rounded-md overflow-hidden"
+                ? "absolute top-[12rem] left-0 justify-center w-full flex flex-col overflow-hidden px-5 md:px-10 items-center"
                 : ""
-            } latest-wrap bg-[#718BFF]`}
+            } latest-wrap`}
           >
             <motion.div
               layout="position"
-              className="rounded-md overflow-hidden flex justify-center items-center w-full bg-[#718BFF] p-5 border-b-2"
+              className={`${latestOpen? 'md:w-11/12' : ''} rounded-tr-lg rounded-tl-lg overflow-hidden flex justify-center items-center w-full bg-[#718BFF] p-5 z-10`}
             >
               <motion.img src={proj} alt="latest-proj-img" className="w-1/2" />
 
@@ -54,7 +58,7 @@ function SectionFive() {
             </motion.div>
 
             {latestOpen && (
-              <motion.table initial={{opacity: 0}} animate={{opacity: 1}} className="w-full bg-white text-zinc-800">
+              <motion.table initial={{opacity: 0}} animate={{opacity: 1}} transition={{delay: .5}} className="w-full md:w-11/12 bg-white text-zinc-800 text-sm md:text-[1rem]">
                 <tbody>
                   <tr>
                     <th className="w-1/2 text-left p-5">Development Period</th>
@@ -63,6 +67,14 @@ function SectionFive() {
                   <tr>
                     <th className="w-1/2 text-left p-5">Release Date</th>
                     <td>April 2022</td>
+                  </tr>
+                  <tr>
+                    <th className="w-1/2 text-left p-5">Development Reason</th>
+                    <td>Showcase Frontend ability.</td>
+                  </tr>
+                  <tr>
+                    <th className="w-1/2 text-left p-5">Visibility</th>
+                    <td>Public</td>
                   </tr>
                 </tbody>
               </motion.table>
