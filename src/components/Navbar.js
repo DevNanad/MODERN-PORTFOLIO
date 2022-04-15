@@ -12,9 +12,8 @@ function Navbar() {
         animate={{y: 0, opacity: 1}}
         transition={{ delay: 0.2, type: 'tween'}}
         >
-            <img src={logo} alt="Logo"
-                initial={{  }}
-            />
+            <img src={logo} alt="logo" />
+
         </motion.div>
 
         <motion.ul className='nav-item roboto flex justify-between items-center gap-5 md:gap-20 px-4 md:px-10 tracking-widest text-sm md:text-base z-20'

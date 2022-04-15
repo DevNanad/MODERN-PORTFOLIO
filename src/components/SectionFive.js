@@ -7,7 +7,6 @@ function SectionFive() {
   const [latestOpen, setLatestOpen] = useState(false)
 
   useEffect(()=>{
-    console.log("rerendered");
   },[latestOpen])
 
   return (
@@ -89,19 +88,19 @@ function SectionFive() {
               See all
             </button>
           </div>
-          <div className="hidden md:grid md:grid-rows-2 md:grid-cols-2 md:grid-flow-col gap-4 w-full px-5 rounded-xl overflow-hidden">
-            <div className="bg-blue-300 p-4">
+          <div className="hidden md:grid md:grid-rows-2 md:grid-cols-2 md:grid-flow-col gap-4 w-full px-5 rounded-xl">
+            <motion.div whileHover={{ y: -10 }} className="bg-blue-300 hover:bg-blue-200 p-4 rounded-lg pb-10">
               <img src={proj} alt="latest-proj-img" className="w-1/2" />
-            </div>
-            <div className="bg-yellow-300 p-4">
+            </motion.div>
+            <motion.div whileHover={{ y: -10 }} className="bg-yellow-300 hover:bg-yellow-200 p-4 rounded-lg pb-10">
               <img src={proj} alt="latest-proj-img" className="w-1/2" />
-            </div>
-            <div className="bg-red-300 p-4">
+            </motion.div>
+            <motion.div whileHover={{ y: -10 }} className="bg-red-300 hover:bg-red-200 p-4 rounded-lg pb-10">
               <img src={proj} alt="latest-proj-img" className="w-1/2" />
-            </div>
-            <div className="bg-green-300 p-4">
+            </motion.div>
+            <motion.div whileHover={{ y: -10 }} className="bg-green-300 hover:bg-green-200 p-4 rounded-lg pb-10">
               <img src={proj} alt="latest-proj-img" className="w-1/2" />
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
