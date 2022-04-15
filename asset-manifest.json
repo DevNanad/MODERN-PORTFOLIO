@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/MODERN-PORTFOLIO/static/css/main.54fde76a.css",
+    "main.js": "/MODERN-PORTFOLIO/static/js/main.3e7d2d5a.js",
+    "static/media/man.png": "/MODERN-PORTFOLIO/static/media/man.85045063fdc0424d0086.png",
+    "static/media/me.png": "/MODERN-PORTFOLIO/static/media/me.4e250eb743a065af6e26.png",
+    "static/media/hellome.png": "/MODERN-PORTFOLIO/static/media/hellome.038733087d2f051cf75b.png",
+    "static/media/proj.png": "/MODERN-PORTFOLIO/static/media/proj.1249dfd45634a2216686.png",
+    "static/media/logo.png": "/MODERN-PORTFOLIO/static/media/logo.d6be6c710157e8445307.png",
+    "index.html": "/MODERN-PORTFOLIO/index.html",
+    "main.54fde76a.css.map": "/MODERN-PORTFOLIO/static/css/main.54fde76a.css.map",
+    "main.3e7d2d5a.js.map": "/MODERN-PORTFOLIO/static/js/main.3e7d2d5a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.54fde76a.css",
+    "static/js/main.3e7d2d5a.js"
+  ]
+}
