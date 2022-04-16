@@ -25,9 +25,9 @@ function Midnavbar() {
               <FiMenu className='text-blue-300 hover:text-blue-100 text-2xl block md:hidden scale-150 '/>
             </div>
         </div>
-        <nav className={`${toggle ? 'transform-none ease-in duration-300 pb-4 md:pb-0': '-translate-y-[100vh] ease-out duration-300'} midlink flex md:justify-around md:flex-row md:h-[3rem] md:static bg-[#718BFF] md:bg-[#292C35] w-screen fixed top-0 h-[58vh] -translate-y-[100vh] md:transform-none  poppins flex-col items-center justify-end z-50 rounded-lg`} >
+        <nav className={`${toggle ? 'transform-none ease-in duration-300 pb-4 md:pb-0': '-translate-y-[100vh] ease-out duration-300'} midlink flex md:justify-around md:flex-row md:h-[3rem] md:static bg-[#718BFF] md:bg-[#292C35] w-screen fixed top-0 h-[58vh] -translate-y-[100vh] md:transform-none  poppins flex-col items-center justify-end z-50 rounded-lg `} >
 
-            <div onClick={() =>setToggle(false)} className="btn-close flex justify-around items-center md:hidden w-full h-[8vh] text-center hover:shadow-md">
+            <div onClick={() =>setToggle(false)} className="btn-close flex justify-around items-center md:hidden w-full h-[8vh] text-center pt-20 z-10 hover:shadow-md">
               {/*Logo*/}
 
               <img src={logowhite} alt="Logo" onClick={() => scroll.scrollToTop()} className="h-12"/>
