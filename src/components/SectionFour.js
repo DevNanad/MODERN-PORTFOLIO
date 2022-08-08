@@ -1,6 +1,29 @@
 import React from 'react'
+import { useEffect, useState } from 'react'
+import axios from 'axios'
 
 function SectionFour() {
+  const [timelineData, setTimelineData] = useState([])
+
+  const url = "https://modernportfolioapi.herokuapp.com"
+
+
+  //dynamic timeline data
+  useEffect(() => {
+
+
+    async function getUser() {
+      try {
+        const response = await axios.get(`${url}/api/timeline`)
+        console.log(response);
+        setTimelineData(response.data)
+      } catch (error) {
+        console.error(error.response.data);
+      }
+    }
+
+    getUser()
+  }, [])
 
 
   return (
@@ -22,51 +45,20 @@ function SectionFour() {
             
             
             {/* Left ONE */}
-            <div  className="wrapper-timeline ">
+            {timelineData.map((data) => (
+              <div  className="wrapper-timeline " key={data._id} >
 
               
               <div className="first-content relative ">
                 <div className="left-title rounded-lg text-center font-bold poppins md:mb-6 bg-white text-[#616060] shadow-2xl">
-                  <h2 className='text-4xl pt-3'>2014</h2>
-                  <h5 className='text-sm paintedblue pb-3 md:tracking-widest'>Graduated Grade School</h5>
+                  <h2 className='text-4xl pt-3'>{data.year}</h2>
+                  <h5 className='text-sm paintedblue pb-3 md:tracking-widest'>{data.subtitle}</h5>
                 </div>
-                <p className='shadow-lg p-4 text-center md:text-left'>A Government grade school for its citizen located at Zapote Las Pinas City.</p>
+                <p className='shadow-lg p-4 text-center md:text-left'>{data.description}</p>
               </div>
             </div>
+            ))}
 
-            {/* RIGHT ONE */}
-            <div  className="wrapper-timeline">
-              <div className="first-content relative">
-                <div className="left-title rounded-lg text-center font-bold poppins md:mb-6 bg-white text-[#616060] shadow-2xl">
-                  <h2 className='text-4xl pt-3'>2018</h2>
-                  <h5 className='text-sm paintedblue pb-3 md:tracking-widest'>Graduated Junior High School</h5>
-                </div>
-                <p className='shadow-lg p-4 text-center md:text-left'>At PAA (Palawan Adventist Academy) an intitution of Christ founded to spread gospel to everyone bough of academics, located at Tacras Narra Palawan</p>
-              </div>
-            </div>
-
-            {/* Left TWO */}
-            <div className="wrapper-timeline">
-              <div className="first-content relative">
-                <div className="left-title rounded-lg text-center font-bold poppins md:mb-6 bg-white text-[#616060] shadow-2xl">
-                  <h2 className='text-4xl pt-3'>2020 (March)</h2>
-                  <h5 className='text-sm paintedblue pb-3 md:tracking-widest'>Graduated Senior High School</h5>
-                </div>
-                <p className='shadow-lg p-4 text-center md:text-left'>At NLAC (Northern luzon Adventist College) an Adventist institution which value relationship with God, located at Artacho Sison Pangasinan.</p>
-              </div>
-            </div>
-
-            {/* RIGHT TWO */}
-            <div className="wrapper-timeline">
-              <div className="first-content relative">
-                <div className="left-title rounded-lg text-center font-bold poppins md:mb-6 bg-white text-[#616060] shadow-2xl">
-                  <h2 className='text-4xl pt-3'>2020 (August)</h2>
-                  <h5 className='text-sm paintedblue pb-3 md:tracking-widest'>Started College</h5>
-                </div>
-                <p className='shadow-lg p-4 text-center md:text-left'>At TCU (Taguig City University) currently taking bachelors degree of Computer Science (BSCS)</p>
-              </div>
-            </div>
-            
           </div>
 
 
@@ -78,56 +70,25 @@ function SectionFour() {
               <div className="flex small-timeline h-full py-10 px-8 flex-col gap-10  justify-center flex-[40%] text-right">
               
                 {/* Left ONE */}
-                <div className="smallwrapper-timeline">
+                {timelineData.map((data) => (
+                  <div className="smallwrapper-timeline" key={data._id}>
+
                   <div className="first-content relative">
                     <div className="year-title rounded-lg text-center font-bold poppins md:mb-6 bg-white text-[#616060] shadow-2xl">
-                      <h2 className='text-3xl pt-3'>2014</h2>
-                      <h5 className='text-sm paintedblue pb-3 md:tracking-widest'>Graduated Grade School</h5>
+                      <h2 className='text-3xl pt-3'>{data.year}</h2>
+                      <h5 className='text-sm paintedblue pb-3 md:tracking-widest'>{data.subtitle}</h5>
                     </div>
-                    <p className='shadow-lg p-4 text-center md:text-left hidden md:block'>A Government grade school for its citizen located at Zapote Las Pinas City.</p>
+                    <p className='shadow-lg p-4 text-center md:text-left hidden md:block'>{data.description}</p>
                   </div>
                 </div>
+                ))}
 
-                {/* RIGHT ONE */}
-                <div className="smallwrapper-timeline">
-                  <div className="first-content relative">
-                    <div className="year-title rounded-lg text-center font-bold poppins md:mb-6 bg-white text-[#616060] shadow-2xl">
-                      <h2 className='text-3xl pt-3'>2018</h2>
-                      <h5 className='text-sm paintedblue pb-3 md:tracking-widest'>Graduated Junior High School</h5>
-                    </div>
-                    <p className='shadow-lg p-4 text-center md:text-left hidden md:block'>At PAA (Palawan Adventist Academy) an intitution of Christ founded to spread gospel to everyone bough of academics, located at Tacras Narra Palawan</p>
-                  </div>
-                </div>
 
-                {/* Left TWO */}
-                <div className="smallwrapper-timeline">
-                  <div className="first-content relative">
-                    <div className="year-title rounded-lg text-center font-bold poppins md:mb-6 bg-white text-[#616060] shadow-2xl">
-                      <h2 className='text-3xl pt-3'>2020 (March)</h2>
-                      <h5 className='text-sm paintedblue pb-3 md:tracking-widest'>Graduated Senior High School</h5>
-                    </div>
-                    <p className='shadow-lg p-4 text-center md:text-left hidden md:block'>At NLAC (Northern luzon Adventist College) an Adventist institution which value relationship with God, located at Artacho Sison Pangasinan.</p>
-                  </div>
-                </div>
-
-                {/* RIGHT TWO */}
-                <div className="smallwrapper-timeline">
-                  <div className="first-content relative">
-                    <div className="year-title rounded-lg text-center font-bold poppins md:mb-6 bg-white text-[#616060] shadow-2xl">
-                      <h2 className='text-3xl pt-3'>2020 (August)</h2>
-                      <h5 className='text-sm paintedblue pb-3 md:tracking-widest'>Started College</h5>
-                    </div>
-                    <p className='shadow-lg p-4 text-center md:text-left hidden md:block'>At TCU (Taguig City University) currently taking bachelors degree of Computer Science (BSCS)</p>
-                  </div>
-              </div>
-              
             </div>
             </div>
           
-
         </div>
         
-
     </div>
   )
 }
