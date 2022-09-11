@@ -7,6 +7,10 @@ import SectionOne from './components/SectionOne';
 import SectionSix from './components/SectionSix';
 import SectionThree from './components/SectionThree';
 import SectionTwo from './components/SectionTwo';
+import { QueryClient, QueryClientProvider } from 'react-query'
+
+const queryClient = new QueryClient()
+
 
 function App() {
   return (
@@ -16,7 +20,12 @@ function App() {
       <SectionTwo/>
       <Midnavbar/>
       <SectionThree/>
-      <SectionFour/>
+
+      {/* query client wrapper fron REACTQUERY */}
+      <QueryClientProvider client={queryClient}>
+        <SectionFour/>
+      </QueryClientProvider>
+
       <SectionFive/>
       <SectionSix/>
       <Footer/>

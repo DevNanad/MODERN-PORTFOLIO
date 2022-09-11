@@ -12,6 +12,7 @@
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
     "react-intersection-observer": "^8.33.1",
+    "react-query": "^3.39.2",
     "react-scripts": "5.0.0",
     "react-scroll": "^1.8.6",
     "react-tsparticles": "^1.43.1",
