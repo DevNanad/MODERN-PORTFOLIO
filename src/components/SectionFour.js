@@ -77,12 +77,17 @@ function SectionFour() {
         </div>
 
         <div className="malls  md:hidden flex h-[80vh]">
-          <div className="line-large relative left-4 h-full"></div>
+          { status === 'success' && (<div className="line-large relative left-4 h-full"></div>)}
 
           {/* Small timeline */}
           <div className="flex small-timeline h-full py-10 px-8 flex-col gap-10  justify-center flex-[40%] text-right">
             {/* Left ONE */}
-            {timelineData.map((data) => (
+
+            { status === 'loading' && (<h3 className="text-center">Data is Fetching...</h3>)}
+          
+            { status === 'error' && (<h3 className="text-center">Error Fetching Data :(</h3>)}
+
+            { status === 'success' && timelineData.map((data) => (
               <div className="smallwrapper-timeline" key={data._id}>
                 <div className="first-content relative">
                   <div className="year-title rounded-lg text-center font-bold poppins md:mb-6 bg-white text-[#616060] shadow-2xl">
