@@ -5,7 +5,7 @@ import { useQuery } from "react-query";
 function SectionFour() {
   const [timelineData, setTimelineData] = useState([]);
 
-  //const url = "https://portfolio-node-api-hjgk.onrender.com";
+  const url = "https://portfolio-node-api-hjgk.onrender.com";
 
   //async api call with fetch
   const fetchInfo = async () => {
