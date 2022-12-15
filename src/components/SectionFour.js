@@ -5,13 +5,14 @@ import { useQuery } from "react-query";
 function SectionFour() {
   const [timelineData, setTimelineData] = useState([]);
 
-  const url = "https://modernportfolioapi.herokuapp.com";
+  //const url = "https://portfolio-node-api-hjgk.onrender.com";
 
   //async api call with fetch
   const fetchInfo = async () => {
-    const info = await fetch(`${url}/api/timeline`);
+    const info = await fetch(`/api/timeline`);
     const result = await info.json();
     setTimelineData(result);
+    
   }
 
   //REACT QUERY

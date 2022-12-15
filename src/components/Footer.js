@@ -13,7 +13,7 @@ function Footer() {
 
         <h1 className='text-center pt-10 text-2xl font-semibold'>Menard Pajares <span className='font-light port'>Portfolio</span></h1>
 
-        <p className='w-3/5 py-8 text-center text-sm'>The entire menardpajares.com Web site is Copyright &copy;2022 by Menard Pajares. All Rights Reserved. The menardpajares.me site may not be copied or duplicated in whole part by any means without express prior agreement in writing or unless specifically noted on the site.</p>
+        <p className='w-3/5 py-8 text-center text-sm'>The entire menardpajares.me Web site is Copyright &copy;2022 by Menard Pajares. All Rights Reserved. The menardpajares.me site may not be copied or duplicated in whole part by any means without express prior agreement in writing or unless specifically noted on the site.</p>
 
         <div className="objectives font-semibold grid grid-cols-2 gap-4 md:gap-12 lg:gap-20 md:grid-cols-4 text-sm md:text-md">
 
