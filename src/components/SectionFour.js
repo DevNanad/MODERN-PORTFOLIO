@@ -9,7 +9,7 @@ function SectionFour() {
 
   //async api call with fetch
   const fetchInfo = async () => {
-    const info = await fetch(`/api/timeline`);
+    const info = await fetch(`${url}/api/timeline`);
     const result = await info.json();
     setTimelineData(result);
     
