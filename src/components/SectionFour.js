@@ -1,27 +1,31 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useQuery } from "react-query";
+import { useTimelineStore } from '../store/zustand'
 
 function SectionFour() {
-  const [timelineData, setTimelineData] = useState([]);
+  //const [timelineData, setTimelineData] = useState([]);
+  const { fetchapi, timelinedata } = useTimelineStore((state) => state)
 
-  const url = "https://portfolio-node-api-hjgk.onrender.com";
+  //const url = "https://portfolio-node-api-hjgk.onrender.com";
 
   //async api call with fetch
-  const fetchInfo = async () => {
-    const info = await fetch(`${url}/api/timeline`);
-    const result = await info.json();
-    setTimelineData(result);
+  // const fetchInfo = async () => {
+  //   const info = await fetch(`${url}/api/timeline`);
+  //   const result = await info.json();
+  //   setTimelineData(result);
     
-  }
+  //}
 
   //REACT QUERY
-  const { data, status } = useQuery("timeline", fetchInfo);
+  const { data, status } = useQuery("timeline", fetchapi);
+
+  //console.log(timelinedata)
 
   //dynamic timeline data
-  useEffect(() => {
+  // useEffect(() => {
 
-  }, [data])
+  // }, [data])
 
   return (
     <div
@@ -60,7 +64,7 @@ function SectionFour() {
           
           { status === 'error' && (<h3>Error Fetching Data :(</h3>)}
 
-          { status === 'success' && timelineData.map((data) => (
+          { status === 'success' && timelinedata.map((data) => (
             <div className="wrapper-timeline " key={data._id}>
               <div className="first-content relative ">
                 <div className="left-title rounded-lg text-center font-bold poppins md:mb-6 bg-white text-[#616060] shadow-2xl">
@@ -88,7 +92,7 @@ function SectionFour() {
           
             { status === 'error' && (<h3 className="text-center">Error Fetching Data :(</h3>)}
 
-            { status === 'success' && timelineData.map((data) => (
+            { status === 'success' && timelinedata.map((data) => (
               <div className="smallwrapper-timeline" key={data._id}>
                 <div className="first-content relative">
                   <div className="year-title rounded-lg text-center font-bold poppins md:mb-6 bg-white text-[#616060] shadow-2xl">

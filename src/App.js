@@ -8,6 +8,7 @@ import SectionSix from './components/SectionSix';
 import SectionThree from './components/SectionThree';
 import SectionTwo from './components/SectionTwo';
 import { QueryClient, QueryClientProvider } from 'react-query'
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 const queryClient = new QueryClient()
 
@@ -15,6 +16,15 @@ const queryClient = new QueryClient()
 function App() {
   return (
     <div className="app">
+
+      <BrowserRouter>
+
+        <Routes>
+          <Route path="/login"/>
+
+        </Routes>
+      
+      </BrowserRouter>
       <Navbar/>
       <SectionOne/>
       <SectionTwo/>
