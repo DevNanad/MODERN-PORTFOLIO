@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './pages/Login';
 import Home from './pages/Home';
 import { useEffect } from 'react';
@@ -9,7 +9,7 @@ import Dashboard from './pages/Dashboard';
 function App() {
 
 
-  const { checklogin } = useTimelineStore((state) => state)
+  const { checklogin, token } = useTimelineStore((state) => state)
 
   //check if token already exist in local storage
   useEffect(() =>{
@@ -17,6 +17,9 @@ function App() {
 
     if(user){
         checklogin(user)
+    }
+    if(!user){
+      <Navigate to="/admin/login" replace={true} />
     }
     
   }, [])
@@ -28,8 +31,10 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home/>}/>
-          <Route path="/admin/login"element={<Login/>}/>
-          <Route path="/admin/dashboard" element={<Dashboard/>}/>
+
+          <Route path="/admin/login"element={token ? <Navigate to="/admin/dashboard" replace /> :  <Login />}/>
+
+          <Route path="/admin/dashboard" element={!token ? <Navigate to="/admin/login" replace /> :  <Dashboard />}/>
 
 
         </Routes>

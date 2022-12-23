@@ -35,7 +35,7 @@ export default function Login() {
                 <img src={cat} alt="sneaking cat" className='sneaking-cat w-40 translate-y-[4px]'/>
             </div>
             
-            {token && (<Navigate to="/admin/dashboard" replace={true} />)}
+            {/* {token && (<Navigate to="/admin/dashboard" replace={true} />)} */}
             <form 
             onSubmit={loginSubmit}
             className="details-container w-[20rem] bg-[#21262D]/95 flex flex-col items-center px-6 py-4 rounded-2xl border-[1px] border-[#6E88F9]">
