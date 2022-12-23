@@ -4,9 +4,10 @@ import create from 'zustand'
 export const useTimelineStore = create((set,get) => ({
     //states
     timelinedata: [],
-    login: null,
+    token: null,
     isLoading: null,
     setError: null,
+    authenticated: false,
 
 
 
@@ -25,10 +26,16 @@ export const useTimelineStore = create((set,get) => ({
     },
 
     
-    checklogin: (user) => set({login: JSON.stringify(user)}),
+    checklogin: (user) => set({token: JSON.stringify(user)}),
 
 
 
+    logoutRequest: () =>{
+        set({ authenticated: false, token: null, user: null });
+
+        //remove token from local storage
+        localStorage.removeItem('user');
+    },
     loginRequest: async (username, password) => {
 
         try {
@@ -43,8 +50,6 @@ export const useTimelineStore = create((set,get) => ({
 
             
 
-            console.log(json);
-
             if(!response.ok){
                 set(() => ({isLoading: false}))
                 set(() => ({setError: json.error}))
@@ -55,8 +60,10 @@ export const useTimelineStore = create((set,get) => ({
                 localStorage.setItem('user', JSON.stringify(json))
                 
 
+                
+
                 //set login
-                set(() => ({ login: json}))
+                set(() => ({authenticated: true, token: json, setError: null}))
 
                 set(() => ({isLoading: false}))
                 

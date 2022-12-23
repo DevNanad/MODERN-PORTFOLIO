@@ -2,14 +2,14 @@ import React from 'react'
 import cat from "../images/cat.png";
 import { useState } from 'react';
 import { useTimelineStore } from '../store/zustand'
-import { redirect } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
 
 export default function Login() {
 
   const [ username, setUsername ] = useState('')
   const [ password, setPassword ] = useState('')
-  const { login, loginRequest, isLoading, setError } = useTimelineStore((state) => state)
+  const { token, loginRequest, isLoading, setError } = useTimelineStore((state) => state)
 
 
   const loginSubmit  = (e) => {
@@ -17,15 +17,13 @@ export default function Login() {
 
     loginRequest(username, password)
   
-    console.log(username, password);
+    //console.log(username, password);
 
-    // if(!login){
-    //   return redirect("/login");
-    // }else{
-    //   return redirect("/");
-    // }
+    //console.log(token);
+
   }
 
+ 
 
 
   return (
@@ -37,6 +35,7 @@ export default function Login() {
                 <img src={cat} alt="sneaking cat" className='sneaking-cat w-40 translate-y-[4px]'/>
             </div>
             
+            {token && (<Navigate to="/admin/dashboard" replace={true} />)}
             <form 
             onSubmit={loginSubmit}
             className="details-container w-[20rem] bg-[#21262D]/95 flex flex-col items-center px-6 py-4 rounded-2xl border-[1px] border-[#6E88F9]">
@@ -71,8 +70,8 @@ export default function Login() {
                 
 
                 { setError && <div className='text-red-400 text-sm p-1 text-center'>{setError}</div>}
-                { login && <div className='text-red-400'>Logged in!</div>}
-                { !login && <div className='text-red-400'>Not Logged in!</div>}
+                { token && <div className='text-red-400'>Logged in!</div>}
+                { !token && <div className='text-red-400'>Not Logged in!</div>}
 
             </form>
         </div>
