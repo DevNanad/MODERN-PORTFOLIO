@@ -5,6 +5,7 @@ export const useTimelineStore = create((set,get) => ({
     //states
     timelinedata: [],
     token: null,
+    username: null,
     isLoading: null,
     setError: null,
     authenticated: false,
@@ -71,6 +72,10 @@ export const useTimelineStore = create((set,get) => ({
         } catch (error) {
             console.log(error.message);
         }
+    },
+
+    setUsername: (username) =>{
+        set(() => ({username: username}))
     }
 
 

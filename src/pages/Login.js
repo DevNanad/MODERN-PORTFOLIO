@@ -2,14 +2,13 @@ import React from 'react'
 import cat from "../images/cat.png";
 import { useState } from 'react';
 import { useTimelineStore } from '../store/zustand'
-import { Navigate } from "react-router-dom";
 
 
 export default function Login() {
 
-  const [ username, setUsername ] = useState('')
+  const [ username, setlocalUsername ] = useState('')
   const [ password, setPassword ] = useState('')
-  const { token, loginRequest, isLoading, setError } = useTimelineStore((state) => state)
+  const { token, loginRequest, isLoading, setError, setUsername } = useTimelineStore((state) => state)
 
 
   const loginSubmit  = (e) => {
@@ -17,9 +16,9 @@ export default function Login() {
 
     loginRequest(username, password)
   
-    //console.log(username, password);
+    setUsername(username);
 
-    //console.log(token);
+    //console.log(username);
 
   }
 
@@ -45,7 +44,7 @@ export default function Login() {
                 <input 
                 type="text" 
                 placeholder='Username' 
-                onChange={(e) => setUsername(e.target.value)}
+                onChange={(e) => setlocalUsername(e.target.value)}
                 value={username}
                 className='bg-[#1B1D28] w-full px-3 py-2 rounded-md border-2 border-[#444C55] focus:outline-none focus:border-[#6E88F9]'/>
 

@@ -4,13 +4,13 @@ import { useTimelineStore } from '../store/zustand'
 import logo from '../images/logo.png'
 
 import {FiHome,FiSettings} from 'react-icons/fi'
-import {GiBlackBook} from 'react-icons/gi'
+import {GiBlackBook, GiH2O} from 'react-icons/gi'
 import {FaBusinessTime} from 'react-icons/fa'
 import {AiOutlineFundProjectionScreen,AiOutlineCrown} from 'react-icons/ai'
 
 
 export default function Dashboard() {
-    const {logoutRequest} = useTimelineStore((state) => state)
+    const {logoutRequest, username} = useTimelineStore((state) => state)
 
   return (
     <div className='dashboard-container text-white'>
@@ -58,7 +58,9 @@ export default function Dashboard() {
           </button>
 
         </div>
-        <nav className='dash-header flex items-center justify-end px-5'>
+        <nav className='dash-header flex items-center justify-between px-5'>
+
+            <h2 className='font-bold text-xl'>Welcome Master <span className='text-blue-300 capitalize'>{username}</span></h2>
             <button className='bg-blue-400 p-2 rounded-lg'>
               <NavLink to="/admin/login" onClick={logoutRequest}>Logout</NavLink>
             </button>
