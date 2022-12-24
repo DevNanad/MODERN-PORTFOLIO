@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import { useEffect } from 'react';
 import { useTimelineStore } from './store/zustand'
 import Dashboard from './pages/Dashboard';
+import NotFound from './pages/NotFound';
 
 
 function App() {
@@ -35,6 +36,8 @@ function App() {
           <Route path="/admin/login"element={token ? <Navigate to="/admin/dashboard" replace /> :  <Login />}/>
 
           <Route path="/admin/dashboard" element={!token ? <Navigate to="/admin/login" replace /> :  <Dashboard />}/>
+
+          <Route path='*' element={<NotFound/>}/>
 
 
         </Routes>

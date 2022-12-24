@@ -4,7 +4,7 @@ import { useTimelineStore } from '../store/zustand'
 import logo from '../images/logo.png'
 
 import {FiHome,FiSettings} from 'react-icons/fi'
-import {GiBlackBook, GiH2O} from 'react-icons/gi'
+import {GiBlackBook} from 'react-icons/gi'
 import {FaBusinessTime} from 'react-icons/fa'
 import {AiOutlineFundProjectionScreen,AiOutlineCrown} from 'react-icons/ai'
 
@@ -23,7 +23,7 @@ export default function Dashboard() {
           
 
           <div className="content-holder flex flex-col justify-center items-start gap-5 pl-5">
-            <button className='flex w-full py-3'>
+            <button className='flex w-full py-3 '>
               <FiHome className='text-2xl cursor-pointer'/>
               <h3 className='pl-3'>Dashboard</h3>
             </button>
