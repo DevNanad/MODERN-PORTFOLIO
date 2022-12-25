@@ -1,36 +1,30 @@
 import React from "react";
 import { useState } from "react";
+import { useTimelineStore } from "../../store/zustand";
 
 export default function DashStory() {
 
-  const [imageSelected, setImageSelected] = useState("")
+  const [imagePath, setImagePath] = useState("")
+  const { mystoryUpload } = useTimelineStore((state) => state)
+
 
   const uploadImage = () =>{
-    const formData = new FormData()
-    formData.append("file", imageSelected)
-    formData.append("upload_preset", "wpkq1wg0")
+    mystoryUpload(imagePath)
+  }
 
-    const headers = new Headers();
-    headers.append('Content-Type', 'application/x-www-form-urlencoded');
-    // headers.append('Authorization', `Bearer ${jwt}`);
-
-    fetch("http://api.cloudinary.com/v1_1/nanad/image/upload", {
-      method: "POST",
-      body: formData,
-    })
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.error(error))
-
-
-    //console.log(files[0]);
+  const previewImage = (file) =>{
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      setImagePath(reader.result)
+    }
+    reader.readAsDataURL(file);
   }
 
   return (
     <div className="bg-[#292c35] h-full text-white rounded-lg">
       <h1 className="text-center py-4 font-bold tracking-widest text-xl">Update Story</h1>
 
-      <div className="update-story min-h-fit flex justify-between items-start px-5">
+      <div className="update-story min-h-fit flex justify-around items-start px-5">
 
         <div className="parag-form-holder flex flex-col justify-start gap-6">
 
@@ -78,15 +72,15 @@ export default function DashStory() {
 
         </div>
 
-        <div className="img-story-holder">
-          <img src="" alt="" />
+        <div className="img-story-holder flex flex-col items-center gap-5 mt-10">
+          <img src={imagePath} alt="Preview" className="h-56" />
           <input 
           type="file" 
           alt="upload preview"
-          onChange={(e) => setImageSelected(e.target.files[0])}
-           />
+          className="bg-blue-100 text-black outline-none rounded-md"
+          onChange={(e) => {previewImage(e.target.files[0])}}/>
 
-          <button onClick={uploadImage}>Upload Image</button>
+          <button onClick={uploadImage} className="bg-red-400 px-5 py-3 rounded-full hover:bg-red-500 font-semibold">Upload Image</button>
         </div>
       </div>
     </div>

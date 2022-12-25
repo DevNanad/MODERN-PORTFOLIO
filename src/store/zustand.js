@@ -10,8 +10,6 @@ export const useTimelineStore = create((set,get) => ({
     setError: null,
     authenticated: false,
 
-
-
     
     
 
@@ -24,6 +22,27 @@ export const useTimelineStore = create((set,get) => ({
         const result = await response.json();
 
         set(() => ({timelinedata: result}))
+    },
+
+    mystoryUpload: async (image) => {
+        const formData = new FormData()
+        formData.append("file", image)
+        formData.append("upload_preset", "wpkq1wg0")
+
+        const headers = new Headers();
+        headers.append('Content-Type', 'application/x-www-form-urlencoded');
+        // headers.append('Authorization', `Bearer ${jwt}`);
+
+        fetch("http://api.cloudinary.com/v1_1/nanad/image/upload", {
+        method: "POST",
+        body: formData,
+        })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error(error))
+
+
+        //console.log(files[0]);
     },
 
     
