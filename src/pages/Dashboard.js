@@ -77,7 +77,7 @@ export default function Dashboard() {
             </button>
             
         </nav>
-        <div className="main-content drop-shadow-lg rounded-md">
+        <div className="main-content drop-shadow-lg rounded-md mr-5 py-3">
           {toggle === 1 && <DashHome/> }
           {toggle === 2 && <DashStory/>}
           {toggle === 3 && <DashExperience/>}

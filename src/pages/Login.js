@@ -16,7 +16,7 @@ export default function Login() {
 
     loginRequest(username, password)
   
-    setUsername(username);
+    //setUsername(username);
 
     //console.log(username);
 
