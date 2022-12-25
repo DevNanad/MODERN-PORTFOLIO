@@ -1,6 +1,31 @@
 import React from "react";
+import { useState } from "react";
 
 export default function DashStory() {
+
+  const [imageSelected, setImageSelected] = useState("")
+
+  const uploadImage = () =>{
+    const formData = new FormData()
+    formData.append("file", imageSelected)
+    formData.append("upload_preset", "wpkq1wg0")
+
+    const headers = new Headers();
+    headers.append('Content-Type', 'application/x-www-form-urlencoded');
+    // headers.append('Authorization', `Bearer ${jwt}`);
+
+    fetch("http://api.cloudinary.com/v1_1/nanad/image/upload", {
+      method: "POST",
+      body: formData,
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error(error))
+
+
+    //console.log(files[0]);
+  }
+
   return (
     <div className="bg-[#292c35] h-full text-white rounded-lg">
       <h1 className="text-center py-4 font-bold tracking-widest text-xl">Update Story</h1>
@@ -55,7 +80,13 @@ export default function DashStory() {
 
         <div className="img-story-holder">
           <img src="" alt="" />
-          <input type="file" alt="upload preview" />
+          <input 
+          type="file" 
+          alt="upload preview"
+          onChange={(e) => setImageSelected(e.target.files[0])}
+           />
+
+          <button onClick={uploadImage}>Upload Image</button>
         </div>
       </div>
     </div>
