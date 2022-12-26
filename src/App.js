@@ -5,12 +5,13 @@ import { useEffect } from 'react';
 import { useTimelineStore } from './store/zustand'
 import Dashboard from './pages/Dashboard';
 import NotFound from './pages/NotFound';
+import ProDashboard from './protected/ProDashboard';
+import ProLogin from './protected/ProLogin';
 
 
 function App() {
 
-
-  const { checklogin, token, setUsername } = useTimelineStore((state) => state)
+  const { checklogin, setUsername } = useTimelineStore((state) => state)
 
   //check if token already exist in local storage
   useEffect(() =>{
@@ -20,9 +21,7 @@ function App() {
         checklogin(user)
         setUsername(user.username)
     }
-    if(!user){
-      <Navigate to="/admin/login" replace={true} />
-    }
+
     
   }, [])
 
@@ -34,9 +33,18 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>}/>
 
-          <Route path="/admin/login"element={token ? <Navigate to="/admin/dashboard" replace={true} /> :  <Login />}/>
+          <Route path="/admin/login"element={
+            <ProLogin>
+              <Login/>
+            </ProLogin>
+          }/>
 
-          <Route path="/admin/dashboard" element={!token ? <Navigate to="/admin/login" replace={true} /> :  <Dashboard />}/>
+          <Route path="/admin/dashboard" element={
+
+            <ProDashboard>
+              <Dashboard/>
+            </ProDashboard>}
+          />
 
           <Route path='*' element={<NotFound/>}/>
 
