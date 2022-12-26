@@ -1,27 +1,15 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 import { useTimelineStore } from '../store/zustand'
 import logo from '../images/logo.png'
 import {FiHome,FiSettings} from 'react-icons/fi'
 import {GiBlackBook} from 'react-icons/gi'
 import {FaBusinessTime} from 'react-icons/fa'
 import {AiOutlineFundProjectionScreen,AiOutlineCrown} from 'react-icons/ai'
-import DashHome from './subpages/DashHome';
-import DashStory from './subpages/DashStory';
-import { useState } from 'react';
-import DashExperience from './subpages/DashExperience';
-import DashProjects from './subpages/DashProjects';
-import DashMastery from './subpages/DashMastery';
-
 
 export default function Dashboard() {
     const {logoutRequest, username} = useTimelineStore((state) => state)
-    const [toggle, setToggel] = useState(1)
 
-
-    const toggleTab = (index) =>{
-      setToggel(index)
-    }
 
   return (
     <div className='dashboard-container text-white'>
@@ -34,36 +22,46 @@ export default function Dashboard() {
           
 
           <div className="content-holder flex flex-col justify-center items-start gap-5 pl-5">
-            <button className='flex w-full py-3 ' onClick={() => toggleTab(1)}>
+            <NavLink 
+            to="/admin/dashboard" 
+            className='flex w-full py-3 ' >
               <FiHome className='text-2xl cursor-pointer'/>
               <h3 className='pl-3'>Dashboard</h3>
-            </button>
+            </NavLink>
 
-            <button className='flex w-full py-2' onClick={() => toggleTab(2)}>
+            <NavLink 
+            to="/admin/dashboard/mystory"  
+            className='flex w-full py-2'>
               <GiBlackBook className='text-2xl cursor-pointer'/>
               <h3 className='pl-3'>My Story</h3>
-            </button>
+            </NavLink>
 
-            <button className='flex w-full py-2' onClick={() => toggleTab(3)}>
+            <NavLink 
+            to="/admin/dashboard/experience" 
+            className='flex w-full py-2'>
               <FaBusinessTime className='text-2xl cursor-pointer'/>
               <h3 className='pl-3'>Experience</h3>
-            </button>
+            </NavLink>
 
-            <button className='flex w-full py-2' onClick={() => toggleTab(4)}>
+            <NavLink 
+            to="/admin/dashboard/projects" 
+            className='flex w-full py-2'>
               <AiOutlineFundProjectionScreen className='text-2xl cursor-pointer'/>
               <h3 className='pl-3'>Projects</h3>
-            </button>
+            </NavLink>
 
-            <button className='flex w-full py-2' onClick={() => toggleTab(5)}>
+            <NavLink 
+            to="/admin/dashboard/mastery" 
+            className='flex w-full py-2'>
               <AiOutlineCrown className='text-2xl cursor-pointer'/>
               <h3 className='pl-3'>Mastery/Skills</h3>
-            </button>
+            </NavLink>
             
 
       
           </div>
 
-          <button className='flex w-full py-2 mb-3 pl-5' onClick={() => toggleTab(6)}>
+          <button className='flex w-full py-2 mb-3 pl-5'>
               <FiSettings className='text-2xl cursor-pointer'/>
               <h3 className='pl-3'>Settings</h3>
           </button>
@@ -78,11 +76,7 @@ export default function Dashboard() {
             
         </nav>
         <div className="main-content drop-shadow-lg rounded-md mr-5 py-3">
-          {toggle === 1 && <DashHome/> }
-          {toggle === 2 && <DashStory/>}
-          {toggle === 3 && <DashExperience/>}
-          {toggle === 4 && <DashProjects/>}
-          {toggle === 5 && <DashMastery/>}
+          <Outlet/>
         </div>
 
 
