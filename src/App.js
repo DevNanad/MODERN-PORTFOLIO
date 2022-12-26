@@ -1,4 +1,9 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { 
+  Route, 
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider 
+} from 'react-router-dom';
 import Login from './pages/Login';
 import Home from './pages/Home';
 import { useEffect } from 'react';
@@ -7,6 +12,38 @@ import Dashboard from './pages/Dashboard';
 import NotFound from './pages/NotFound';
 import ProDashboard from './protected/ProDashboard';
 import ProLogin from './protected/ProLogin';
+
+
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+
+
+    <Route>
+
+          <Route path="/" element={<Home/>}/>
+
+
+          <Route path="/admin/login"element={
+
+            <ProLogin>
+              <Login/>
+            </ProLogin>
+          }/>
+
+          <Route path="/admin/dashboard" element={
+
+            <ProDashboard>
+              <Dashboard/>
+            </ProDashboard>}
+          />
+
+          <Route path='*' element={<NotFound/>}/>
+
+    </Route>
+  )
+)
+
 
 
 function App() {
@@ -26,34 +63,7 @@ function App() {
   }, [])
 
   return (
-    <div className="app">
-
-      <BrowserRouter>
-
-        <Routes>
-          <Route path="/" element={<Home/>}/>
-
-          <Route path="/admin/login"element={
-            <ProLogin>
-              <Login/>
-            </ProLogin>
-          }/>
-
-          <Route path="/admin/dashboard" element={
-
-            <ProDashboard>
-              <Dashboard/>
-            </ProDashboard>}
-          />
-
-          <Route path='*' element={<NotFound/>}/>
-
-
-        </Routes>
-      
-      </BrowserRouter>
-
-    </div>
+    <RouterProvider router={router}/>
   );
 }
 
