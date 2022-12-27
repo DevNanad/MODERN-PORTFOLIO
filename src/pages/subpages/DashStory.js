@@ -5,8 +5,31 @@ import { useTimelineStore } from "../../store/zustand";
 export default function DashStory() {
 
   const [imagePath, setImagePath] = useState("")
-  const { mystoryUpload } = useTimelineStore((state) => state)
+  const [newParagraph, setNewParagraph] = useState("")
+  const { mystoryUpload, token } = useTimelineStore((state) => state)
 
+
+
+  //update paragraph in story
+  const mystoryUpdateParagraph = async (e) => {
+    e.preventDefault()
+
+    // console.log(token);
+    // console.log(newParagraph);
+
+    await fetch("http://localhost:4000/api/admin/story/63ab112d7ecbc1bae3325a2d", {
+        method: "PATCH",
+        body: JSON.stringify({
+            paragraph1: newParagraph
+        }),
+        headers: {
+            'Content-Type': 'application/json',
+            'auth-token': token.token
+        }
+    }).then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error(error))
+  }
 
   const uploadImage = () =>{
     mystoryUpload(imagePath)
@@ -35,12 +58,19 @@ export default function DashStory() {
               <textarea
                 cols="50"
                 rows="4"
+                onChange={(e) => {setNewParagraph(e.target.value) 
+                  console.log(e.target.value)}}
+                value={newParagraph}
                 className="resize-none text-black p-3 outline-none rounded-md"
               />
             </div>
 
-            <button type="submit" className="bg-blue-400  py-2 px-5 rounded-full font-semibold hover:bg-blue-600">Update</button>
+            <button 
+            type="submit" 
+            onClick={mystoryUpdateParagraph}
+            className="bg-blue-400  py-2 px-5 rounded-full font-semibold hover:bg-blue-600">Update</button>
           </form>
+
 
           {/* Paragraph 2 */}
           <form className="flex items-center gap-4">

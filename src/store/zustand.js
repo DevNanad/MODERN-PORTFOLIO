@@ -44,9 +44,10 @@ export const useTimelineStore = create((set,get) => ({
 
         //console.log(files[0]);
     },
+    
 
     
-    checklogin: (user) => set({token: JSON.stringify(user)}),
+    checklogin: (user) => set({token: user}),
 
 
 
@@ -68,6 +69,7 @@ export const useTimelineStore = create((set,get) => ({
             })
             const json = await response.json()
 
+            console.log(json);
             
 
             if(!response.ok){
