@@ -29,7 +29,7 @@ export default function DashStory() {
         <div className="parag-form-holder flex flex-col justify-start gap-6">
 
           {/* Paragraph 1 */}
-          <form className="flex items-center gap-2">
+          <form className="flex items-center gap-4">
             <div className="textarea-holder flex flex-col">
               <label>Paragraph 1</label>
               <textarea
@@ -39,11 +39,11 @@ export default function DashStory() {
               />
             </div>
 
-            <button type="submit" className="bg-blue-400 py-2 px-5 rounded-full font-semibold">Update</button>
+            <button type="submit" className="bg-blue-400  py-2 px-5 rounded-full font-semibold hover:bg-blue-600">Update</button>
           </form>
 
           {/* Paragraph 2 */}
-          <form className="flex items-center gap-2">
+          <form className="flex items-center gap-4">
             <div className="textarea-holder flex flex-col">
               <label>Paragraph 2</label>
               <textarea
@@ -53,11 +53,11 @@ export default function DashStory() {
               />
             </div>
 
-            <button type="submit" className="bg-blue-400 py-2 px-5 rounded-full font-semibold">Update</button>
+            <button type="submit" className="bg-blue-400  py-2 px-5 rounded-full font-semibold hover:bg-blue-600">Update</button>
           </form>
 
           {/* Paragraph 3 */}
-          <form className="flex items-center gap-2">
+          <form className="flex items-center gap-4">
             <div className="textarea-holder flex flex-col">
               <label>Paragraph 3</label>
               <textarea
@@ -67,13 +67,13 @@ export default function DashStory() {
               />
             </div>
 
-            <button type="submit" className="bg-blue-400 py-2 px-5 rounded-full font-semibold">Update</button>
+            <button type="submit" className="bg-blue-400  py-2 px-5 rounded-full font-semibold hover:bg-blue-600">Update</button>
           </form>
 
         </div>
 
         <div className="img-story-holder flex flex-col items-center gap-5 mt-10">
-          <img src={imagePath} alt="Preview" className="h-56" />
+          <img src={imagePath || "https://icons-for-free.com/iconfiles/png/512/gallery+image+landscape+mobile+museum+open+line+icon-1320183049020185924.png"} alt="Preview" className="h-56" />
           <input 
           type="file" 
           alt="upload preview"

@@ -38,7 +38,7 @@ export const useTimelineStore = create((set,get) => ({
         body: formData,
         })
         .then(response => response.json())
-        .then(data => console.log(data))
+        .then(data => console.log(data.secure_url))
         .catch(error => console.error(error))
 
 
