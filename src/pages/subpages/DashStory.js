@@ -8,7 +8,8 @@ export default function DashStory() {
   const [paraOne, setParaOne] = useState("")
   const [paraTwo, setParaTwo] = useState("")
   const [paraTre, setParaTre] = useState("")
-  const { mystoryUpload,token } = useTimelineStore((state) => state)
+  const [imageUrl, setImageUrl] = useState("")
+  const { token } = useTimelineStore((state) => state)
 
 
 
@@ -50,7 +51,7 @@ export default function DashStory() {
     
   }
 
-    //PARAGRAPH 3
+  //PARAGRAPH 3
   const handlePatchRequest3 = async (e) => {
     e.preventDefault()
 
@@ -69,10 +70,47 @@ export default function DashStory() {
     
   }
 
+  const patchStoryImage = async (url) =>{
+    await fetch("http://localhost:4000/api/admin/story/63ab112d7ecbc1bae3325a2d", {
+            method: "PATCH",
+            body: JSON.stringify({
+                storyImage: url
+            }),
+            headers: {
+                'Content-Type': 'application/json',
+                'auth-token': token.token
+            }
+        }).then(response => response.json())
+        .then(data => {
+          //console.log(data)
+        })
+        .catch(error => console.error(error))
+    
+  }
 
   //UPLOAD IMAGE IN CLOUDINARY
-  const uploadImage = () =>{
-    mystoryUpload(imagePath)
+  const uploadImage = async (e) =>{
+    e.preventDefault()
+    const formData = new FormData()
+    formData.append("file", imagePath)
+    formData.append("upload_preset", "wpkq1wg0")
+
+    const headers = new Headers();
+    headers.append('Content-Type', 'application/x-www-form-urlencoded');
+
+    await fetch("http://api.cloudinary.com/v1_1/nanad/image/upload", {
+    method: "POST",
+    body: formData,
+    })
+    .then(response => response.json())
+    .then(data => {
+      patchStoryImage(data.url)
+      //console.log(data.url)
+    })
+    .catch(error => console.error(error))
+
+    //console.log(files[0]);
+
   }
 
   //PREVIEW IMAGE FUNCTION
