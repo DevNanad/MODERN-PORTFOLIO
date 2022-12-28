@@ -5,18 +5,40 @@ import { useTimelineStore } from "../../store/zustand";
 export default function DashStory() {
 
   const [imagePath, setImagePath] = useState("")
-  const [newParagraph, setNewParagraph] = useState("")
+  const [paraOne, setParaOne] = useState("")
+  const [paraTwo, setParaTwo] = useState("")
+  const [paraTre, setParaTre] = useState("")
   const { mystoryUpload,token } = useTimelineStore((state) => state)
 
 
 
-  const handlePatchRequest = async (e) => {
+  //PARAGRAPH 1
+  const handlePatchRequest1 = async (e) => {
     e.preventDefault()
 
     await fetch("http://localhost:4000/api/admin/story/63ab112d7ecbc1bae3325a2d", {
             method: "PATCH",
             body: JSON.stringify({
-                paragraph1: newParagraph
+                paragraph1: paraOne
+            }),
+            headers: {
+                'Content-Type': 'application/json',
+                'auth-token': token.token
+            }
+        }).then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error(error))   
+  }
+
+
+  //PARAGRAPH 2
+  const handlePatchRequest2 = async (e) => {
+    e.preventDefault()
+
+    await fetch("http://localhost:4000/api/admin/story/63ab112d7ecbc1bae3325a2d", {
+            method: "PATCH",
+            body: JSON.stringify({
+                paragraph2: paraTwo
             }),
             headers: {
                 'Content-Type': 'application/json',
@@ -28,10 +50,32 @@ export default function DashStory() {
     
   }
 
+    //PARAGRAPH 3
+  const handlePatchRequest3 = async (e) => {
+    e.preventDefault()
+
+    await fetch("http://localhost:4000/api/admin/story/63ab112d7ecbc1bae3325a2d", {
+            method: "PATCH",
+            body: JSON.stringify({
+                paragraph3: paraTre
+            }),
+            headers: {
+                'Content-Type': 'application/json',
+                'auth-token': token.token
+            }
+        }).then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error(error))
+    
+  }
+
+
+  //UPLOAD IMAGE IN CLOUDINARY
   const uploadImage = () =>{
     mystoryUpload(imagePath)
   }
 
+  //PREVIEW IMAGE FUNCTION
   const previewImage = (file) =>{
     const reader = new FileReader();
     reader.onloadend = () => {
@@ -55,15 +99,15 @@ export default function DashStory() {
               <textarea
                 cols="50"
                 rows="4"
-                onChange={(e) => {setNewParagraph(e.target.value)}}
-                value={newParagraph}
+                onChange={(e) => {setParaOne(e.target.value)}}
+                value={paraOne}
                 className="resize-none text-black p-3 outline-none rounded-md"
               />
             </div>
 
             <button 
             type="submit" 
-            onClick={handlePatchRequest}
+            onClick={handlePatchRequest1}
             className="bg-blue-400  py-2 px-5 rounded-full font-semibold hover:bg-blue-600">Update</button>
           </form>
 
@@ -75,11 +119,16 @@ export default function DashStory() {
               <textarea
                 cols="50"
                 rows="4"
+                onChange={(e) => {setParaTwo(e.target.value)}}
+                value={paraTwo}
                 className="resize-none text-black p-3 outline-none rounded-md"
               />
             </div>
 
-            <button type="submit" className="bg-blue-400  py-2 px-5 rounded-full font-semibold hover:bg-blue-600">Update</button>
+            <button 
+            type="submit"
+            onClick={handlePatchRequest2} 
+            className="bg-blue-400  py-2 px-5 rounded-full font-semibold hover:bg-blue-600">Update</button>
           </form>
 
           {/* Paragraph 3 */}
@@ -89,11 +138,16 @@ export default function DashStory() {
               <textarea
                 cols="50"
                 rows="4"
+                onChange={(e) => {setParaTre(e.target.value)}}
+                value={paraTre}
                 className="resize-none text-black p-3 outline-none rounded-md"
               />
             </div>
 
-            <button type="submit" className="bg-blue-400  py-2 px-5 rounded-full font-semibold hover:bg-blue-600">Update</button>
+            <button 
+            type="submit"
+            onClick={handlePatchRequest3}  
+            className="bg-blue-400  py-2 px-5 rounded-full font-semibold hover:bg-blue-600">Update</button>
           </form>
 
         </div>
