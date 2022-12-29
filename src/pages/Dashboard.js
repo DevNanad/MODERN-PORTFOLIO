@@ -12,7 +12,7 @@ export default function Dashboard() {
 
 
   return (
-    <div className='dashboard-container h-full bg-slate-300 text-white'>
+    <div className='dashboard-container bg-slate-300 text-white'>
         <div className="sidebar-left drop-shadow-md  h-full px-3 flex flex-col justify-between">
 
           <div className="portfolio-logo-holder flex items-center justify-center pt-3 drop-shadow-2xl">
@@ -67,15 +67,15 @@ export default function Dashboard() {
           </button>
 
         </div>
-        <nav className='dash-header flex items-center justify-between px-5'>
+        <nav className='dash-header pt-5 flex items-center justify-between px-5'>
 
             <h2 className='font-bold text-xl'>Welcome Master <span className='text-[#718BFF] capitalize'>{username}</span></h2>
-            <button className='bg-blue-400 p-2 rounded-lg'>
+            <button className='bg-red-400 p-2 rounded-md'>
               <NavLink to="/admin/login" onClick={logoutRequest}>Logout</NavLink>
             </button>
             
         </nav>
-        <div className="main-content rounded-md mr-5 py-3">
+        <div className="main-content rounded-md pb-3">
           <Outlet/>
         </div>
 

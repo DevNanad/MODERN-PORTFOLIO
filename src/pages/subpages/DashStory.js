@@ -122,10 +122,10 @@ export default function DashStory() {
   }
 
   return (
-    <div className="h-full border-t-2 border-gray-500 text-white rounded-lg">
-      <h1 className="text-center nunito py-4 font-bold tracking-widest text-2xl">Story</h1>
+    <div className="h-full bg-transparent text-white rounded-lg">
+      <h1 className="text-center nunito pb-4 font-semibold tracking-widest text-2xl">Story</h1>
 
-      <div className="update-story min-h-fit lg:flex justify-around items-start px-5">
+      <div className="update-story border-t-2 border-gray-700 rounded-lg min-h-fit lg:flex justify-around items-start px-5 pt-5">
 
         <div className="parag-form-holder roboto flex flex-col gap-5 mt-5">
 
@@ -197,7 +197,7 @@ export default function DashStory() {
           className="bg-blue-100 text-black outline-none rounded-md"
           onChange={(e) => {previewImage(e.target.files[0])}}/>
 
-          <button onClick={uploadImage} className="bg-red-500 px-4 py-3 rounded hover:bg-red-700 font-bold">Upload Image</button>
+          <button onClick={uploadImage} className="bg-emerald-500 px-4 py-3 rounded hover:bg-emerald-700 font-bold">Upload Image</button>
         </div>
       </div>
     </div>
