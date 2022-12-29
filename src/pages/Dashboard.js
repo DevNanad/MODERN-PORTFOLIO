@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink, Outlet } from 'react-router-dom';
+import { NavLink, Outlet, Link } from 'react-router-dom';
 import { useTimelineStore } from '../store/zustand'
 import logo from '../images/logo.png'
 import {FiHome,FiSettings} from 'react-icons/fi'
@@ -12,7 +12,7 @@ export default function Dashboard() {
 
 
   return (
-    <div className='dashboard-container text-white'>
+    <div className='dashboard-container h-full bg-slate-300 text-white'>
         <div className="sidebar-left drop-shadow-md  h-full px-3 flex flex-col justify-between">
 
           <div className="portfolio-logo-holder flex items-center justify-center pt-3 drop-shadow-2xl">
@@ -22,36 +22,36 @@ export default function Dashboard() {
           
 
           <div className="content-holder flex flex-col justify-center items-start gap-5 pl-5">
-            <NavLink 
+            <Link 
             to="/admin/dashboard" 
             className='flex w-full py-3 ' >
               <FiHome className='text-2xl cursor-pointer'/>
               <h3 className='pl-3'>Dashboard</h3>
-            </NavLink>
+            </Link>
 
             <NavLink 
-            to="/admin/dashboard/mystory"  
+            to="mystory"  
             className='flex w-full py-2'>
               <GiBlackBook className='text-2xl cursor-pointer'/>
               <h3 className='pl-3'>My Story</h3>
             </NavLink>
 
             <NavLink 
-            to="/admin/dashboard/experience" 
+            to="experience" 
             className='flex w-full py-2'>
               <FaBusinessTime className='text-2xl cursor-pointer'/>
               <h3 className='pl-3'>Experience</h3>
             </NavLink>
 
             <NavLink 
-            to="/admin/dashboard/projects" 
+            to="projects" 
             className='flex w-full py-2'>
               <AiOutlineFundProjectionScreen className='text-2xl cursor-pointer'/>
               <h3 className='pl-3'>Projects</h3>
             </NavLink>
 
             <NavLink 
-            to="/admin/dashboard/mastery" 
+            to="mastery" 
             className='flex w-full py-2'>
               <AiOutlineCrown className='text-2xl cursor-pointer'/>
               <h3 className='pl-3'>Mastery/Skills</h3>
@@ -69,13 +69,13 @@ export default function Dashboard() {
         </div>
         <nav className='dash-header flex items-center justify-between px-5'>
 
-            <h2 className='font-bold text-xl'>Welcome Master <span className='text-blue-300 capitalize'>{username}</span></h2>
+            <h2 className='font-bold text-xl'>Welcome Master <span className='text-[#718BFF] capitalize'>{username}</span></h2>
             <button className='bg-blue-400 p-2 rounded-lg'>
               <NavLink to="/admin/login" onClick={logoutRequest}>Logout</NavLink>
             </button>
             
         </nav>
-        <div className="main-content drop-shadow-lg rounded-md mr-5 py-3">
+        <div className="main-content rounded-md mr-5 py-3">
           <Outlet/>
         </div>
 

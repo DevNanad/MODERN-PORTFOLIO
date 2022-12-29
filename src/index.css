@@ -365,9 +365,12 @@ body{
 
  /* Dashboard custom grid layout */
 
+ a.active {
+  color: #718BFF;
+ }
  .dashboard-container{
   background-color: #1B1D28;
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
   gap: 2rem;
   grid-template-columns: 250px 1fr;  /* side bar and main content */
@@ -394,17 +397,17 @@ body{
 
 /* choose file button */
 ::-webkit-file-upload-button {
-  background: #171717;
+  background: #718BFF;
   color: white;
-  padding: 0.4em;
+  padding: 5px;
   border-radius: 4px;
   outline: none;
   border: none;
 }
 ::-ms-browse {
-  background: #171717;
+  background: #718BFF;
   color: white;
-  padding: 0.4em;
+  padding: 5px;
   border-radius: 4px;
   outline: none;
   border: none;

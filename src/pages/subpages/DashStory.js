@@ -8,7 +8,6 @@ export default function DashStory() {
   const [paraOne, setParaOne] = useState("")
   const [paraTwo, setParaTwo] = useState("")
   const [paraTre, setParaTre] = useState("")
-  const [imageUrl, setImageUrl] = useState("")
   const { token } = useTimelineStore((state) => state)
 
 
@@ -123,82 +122,82 @@ export default function DashStory() {
   }
 
   return (
-    <div className="bg-[#292c35] h-full text-white rounded-lg">
-      <h1 className="text-center py-4 font-bold tracking-widest text-xl">Update Story</h1>
+    <div className="h-full border-t-2 border-gray-500 text-white rounded-lg">
+      <h1 className="text-center nunito py-4 font-bold tracking-widest text-2xl">Story</h1>
 
-      <div className="update-story min-h-fit flex justify-around items-start px-5">
+      <div className="update-story min-h-fit lg:flex justify-around items-start px-5">
 
-        <div className="parag-form-holder flex flex-col justify-start gap-6">
+        <div className="parag-form-holder roboto flex flex-col gap-5 mt-5">
 
           {/* Paragraph 1 */}
           <form className="flex items-center gap-4">
-            <div className="textarea-holder flex flex-col">
-              <label>Paragraph 1</label>
+            <div className="textarea-holder">
               <textarea
                 cols="50"
                 rows="4"
+                placeholder="Paragraph 1..."
                 onChange={(e) => {setParaOne(e.target.value)}}
                 value={paraOne}
-                className="resize-none text-black p-3 outline-none rounded-md"
+                className="resize-none  bg-gray-700 text-white border-[1px] border-gray-600 p-3 outline-none rounded-md"
               />
             </div>
 
             <button 
             type="submit" 
             onClick={handlePatchRequest1}
-            className="bg-blue-400  py-2 px-5 rounded-full font-semibold hover:bg-blue-600">Update</button>
+            className="bg-blue-500 hover:bg-blue-700 py-2 px-4 rounded font-semibold ">Update</button>
           </form>
 
 
           {/* Paragraph 2 */}
           <form className="flex items-center gap-4">
-            <div className="textarea-holder flex flex-col">
-              <label>Paragraph 2</label>
+            <div className="textarea-holder">
               <textarea
                 cols="50"
                 rows="4"
+                placeholder="Paragraph 2..."
                 onChange={(e) => {setParaTwo(e.target.value)}}
                 value={paraTwo}
-                className="resize-none text-black p-3 outline-none rounded-md"
+                className="resize-none bg-gray-700 text-white border-[1px] border-gray-600 p-3 outline-none rounded-md"
               />
             </div>
 
             <button 
             type="submit"
             onClick={handlePatchRequest2} 
-            className="bg-blue-400  py-2 px-5 rounded-full font-semibold hover:bg-blue-600">Update</button>
+            className="bg-blue-500 hover:bg-blue-700 py-2 px-4 rounded font-semibold ">Update</button>
           </form>
 
           {/* Paragraph 3 */}
           <form className="flex items-center gap-4">
-            <div className="textarea-holder flex flex-col">
-              <label>Paragraph 3</label>
+            <div className="textarea-holder">
               <textarea
                 cols="50"
                 rows="4"
+                placeholder="Paragraph 3..."
                 onChange={(e) => {setParaTre(e.target.value)}}
                 value={paraTre}
-                className="resize-none text-black p-3 outline-none rounded-md"
+                className="resize-none  bg-gray-700 text-white border-[1px] border-gray-600 p-3 outline-none rounded-md"
               />
             </div>
 
             <button 
             type="submit"
             onClick={handlePatchRequest3}  
-            className="bg-blue-400  py-2 px-5 rounded-full font-semibold hover:bg-blue-600">Update</button>
+            className="bg-blue-500 hover:bg-blue-700 py-2 px-4 rounded font-semibold ">Update</button>
           </form>
 
         </div>
 
         <div className="img-story-holder flex flex-col items-center gap-5 mt-10">
-          <img src={imagePath || "https://icons-for-free.com/iconfiles/png/512/gallery+image+landscape+mobile+museum+open+line+icon-1320183049020185924.png"} alt="Preview" className="h-56" />
+          <img src={imagePath || "https://t4.ftcdn.net/jpg/04/08/24/43/360_F_408244382_Ex6k7k8XYzTbiXLNJgIL8gssebpLLBZQ.jpg"} alt="Preview" className="h-56 rounded-md" />
           <input 
           type="file" 
           alt="upload preview"
           className="bg-blue-100 text-black outline-none rounded-md"
           onChange={(e) => {previewImage(e.target.files[0])}}/>
 
-          <button onClick={uploadImage} className="bg-red-400 px-5 py-3 rounded-full hover:bg-red-500 font-semibold">Upload Image</button>
+          <button onClick={uploadImage} className="bg-red-500 px-4 py-3 rounded hover:bg-red-700 font-bold">Upload Image</button>
         </div>
       </div>
     </div>

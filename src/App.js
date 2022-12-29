@@ -28,17 +28,17 @@ const router = createBrowserRouter(
 
     <Route>
 
-          <Route path="/" element={<Home/>}/>
+          <Route index element={<Home/>}/>
 
 
-          <Route path="/admin/login"element={
+          <Route path="admin/login"element={
 
             <ProLogin>
               <Login/>
             </ProLogin>
           }/>
 
-          <Route path="/admin/dashboard" element={
+          <Route path="admin/dashboard" element={
 
             <ProDashboard>
               <Dashboard/>
