@@ -1,11 +1,30 @@
 import React from 'react'
-import hellome from '../images/hellome.png'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer';
+import { useState } from 'react';
+import { useEffect } from 'react';
+
 
 
 function SectionTwo() {
   const { ref:showRef, inView:showIsvisible } = useInView();
+  const [ mystory, setMystory] = useState([])
+
+
+
+  useEffect(() => {
+    const getMyStory = async () =>{
+
+      try {
+        const response = await fetch('http://localhost:4000/api/admin/story');
+        const data = await response.json();
+        setMystory(data);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    getMyStory()
+  }, [mystory])
 
   return (
     <div className="SectionTwo z-30 relative poppins flex" >
@@ -77,9 +96,13 @@ function SectionTwo() {
         <div className="SectionTwo-title px-10 py-10 md:py-8 ">
           <h2 className="Hello text-5xl">/Hello</h2>
         </div>
-        <div className="hello-flex flex flex-col md:grid lg:grid-cols-2">
+        
+        {mystory.map((story) => (
+          <div 
+          key={story._id}
+          className="hello-flex flex flex-col md:grid lg:grid-cols-2">
           <div className="hello-image col-span-1 flex flex-col justify-center">
-            <img src={hellome} alt="Mypic" className="h-72 self-center" />
+            <img src={story.storyImage} alt="Mypic" className="h-72 self-center" />
             <h1 className="text-center text-xl text-white tracking-[.3rem] py-4 roboto font-semibold ">
               Menard M. Pajares
             </h1>
@@ -96,28 +119,22 @@ function SectionTwo() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.5 }}
-            >
-              I'm Menard, First of all, I want to tell you that I am glad that
-              you're here reading this. So you're here with a plan to hire me?,
-              well you are in a perfect place, Ever since I came across the word
-              Web Development I got really curious and search what it means,
-              that time I was only 14 years old.
-            </motion.p>
-            <p ref={showRef} className={`${showIsvisible ? "showtext" : ""} lg:leading-5`}>
-              So I search and read and learn on my own using online tutorials
-              and other resources until now I've got that thing to always seek
-              knowledge and always learn new things.
-            </p>
-            <p ref={showRef} className={`${showIsvisible ? "showtext2" : ""} lg:leading-5`}>
-              And now here I am making a portfolio for anyone who wanted to hire
-              me as their Web Developer and I won't disappoint my client and
-              always make sure to satisfy their ego regarding in Website.
-            </p>
+            >{story.paragraph1}</motion.p>
+
+            <p 
+            ref={showRef} 
+            className={`${showIsvisible ? "showtext" : ""} lg:leading-5`}>{story.paragraph2}</p>
+
+            <p 
+            ref={showRef} 
+            className={`${showIsvisible ? "showtext2" : ""} lg:leading-5`}>{story.paragraph3}</p>
           </div>
         </div>
+        ))}
+        
       </motion.div>
     </div>
-  );
+  )
 }
 
-export default SectionTwo
+export default SectionTwo;
