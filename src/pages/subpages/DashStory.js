@@ -4,6 +4,8 @@ import { useTimelineStore } from "../../store/zustand";
 
 export default function DashStory() {
 
+  const [isUploadLoading, setIsUploadLoading] = useState(null)
+  const [UploadError, setUploadError] = useState(null)
   const [imagePath, setImagePath] = useState("")
   const [paraOne, setParaOne] = useState("")
   const [paraTwo, setParaTwo] = useState("")
@@ -70,7 +72,11 @@ export default function DashStory() {
   }
 
   const patchStoryImage = async (url) =>{
-    await fetch("http://localhost:4000/api/admin/story/63ab112d7ecbc1bae3325a2d", {
+    
+    try {
+
+      setIsUploadLoading(true)
+      const res = await fetch("http://localhost:4000/api/admin/story/63ab112d7ecbc1bae3325a2d", {
             method: "PATCH",
             body: JSON.stringify({
                 storyImage: url
@@ -79,16 +85,28 @@ export default function DashStory() {
                 'Content-Type': 'application/json',
                 'auth-token': token.token
             }
-        }).then(response => response.json())
-        .then(data => {
-          //console.log(data)
         })
-        .catch(error => console.error(error))
-    
+
+      const json = res.json()
+
+      if(!res.ok){
+        setIsUploadLoading(false)
+        setUploadError(json.error)
+      }
+      if(res.ok){
+        setIsUploadLoading(false)
+        setUploadError(null)
+        setImagePath('')
+      }
+   
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   //UPLOAD IMAGE IN CLOUDINARY
   const uploadImage = async (e) =>{
+    setIsUploadLoading(true)
     e.preventDefault()
     const formData = new FormData()
     formData.append("file", imagePath)
@@ -194,10 +212,14 @@ export default function DashStory() {
           <input 
           type="file" 
           alt="upload preview"
+          required
           className="bg-blue-100 text-black outline-none rounded-md"
           onChange={(e) => {previewImage(e.target.files[0])}}/>
 
-          <button onClick={uploadImage} className="bg-emerald-500 px-4 py-3 rounded hover:bg-emerald-700 font-bold">Upload Image</button>
+          {!isUploadLoading ? <button onClick={uploadImage} className="bg-emerald-500 px-4 py-3 rounded hover:bg-emerald-700 font-bold">Upload</button> : <button onClick={uploadImage} className="bg-emerald-500 px-4 py-3 rounded hover:bg-emerald-700 font-bold">Uploading...</button>}
+
+          {UploadError && <div>{UploadError}</div>}
+          
         </div>
       </div>
     </div>
