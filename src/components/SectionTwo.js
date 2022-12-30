@@ -4,24 +4,36 @@ import { useInView } from 'react-intersection-observer';
 import { useState } from 'react';
 import { useEffect } from 'react';
 
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
+
 
 
 function SectionTwo() {
   const { ref:showRef, inView:showIsvisible } = useInView();
   const [ mystory, setMystory] = useState([])
+  const [ storyLoading, setStoryLoading ] = useState(true)
 
 
 
   useEffect(() => {
     const getMyStory = async () =>{
-
       try {
         const response = await fetch('http://localhost:4000/api/admin/story');
         const data = await response.json();
         setMystory(data);
+
+        if(response.ok){
+          setStoryLoading(false)
+        }
+
       } catch (error) {
         console.log(error);
       }
+
+      
+
+      
     }
     getMyStory()
   }, [mystory])
@@ -101,8 +113,11 @@ function SectionTwo() {
           <div 
           key={story._id}
           className="hello-flex flex flex-col md:grid lg:grid-cols-2">
-          <div className="hello-image col-span-1 flex flex-col justify-center">
-            <img src={story.storyImage} alt="Mypic" className="h-72 self-center" />
+          <div className="hello-image col-span-1 flex flex-col items-center">
+            {storyLoading && <Skeleton circle width={280} height={280}/>}
+
+            {!storyLoading && <img src={story.storyImage} alt="Mypic" className="h-72 self-center" />}
+
             <h1 className="text-center text-xl text-white tracking-[.3rem] py-4 roboto font-semibold ">
               Menard M. Pajares
             </h1>

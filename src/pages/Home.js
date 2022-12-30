@@ -9,6 +9,8 @@ import SectionThree from '../components/SectionThree';
 import SectionTwo from '../components/SectionTwo';
 import { QueryClient, QueryClientProvider } from 'react-query'
 
+import { SkeletonTheme } from 'react-loading-skeleton'
+
 const queryClient = new QueryClient()
 
 
@@ -16,20 +18,22 @@ function Home() {
   return (
     <div className="app">
 
-      <Navbar/>
-      <SectionOne/>
-      <SectionTwo/>
-      <Midnavbar/>
-      <SectionThree/>
+      <SkeletonTheme baseColor="#1f2c45" highlightColor="#2a3c5e">
+        <Navbar/>
+        <SectionOne/>
+        <SectionTwo/>
+        <Midnavbar/>
+        <SectionThree/>
 
-      {/* query client wrapper fron REACTQUERY */}
-      <QueryClientProvider client={queryClient}>
-        <SectionFour/>
-      </QueryClientProvider>
+        {/* query client wrapper fron REACTQUERY */}
+        <QueryClientProvider client={queryClient}>
+          <SectionFour/>
+        </QueryClientProvider>
 
-      <SectionFive/>
-      <SectionSix/>
-      <Footer/>
+        <SectionFive/>
+        <SectionSix/>
+        <Footer/>
+      </SkeletonTheme>
     </div>
   );
 }
