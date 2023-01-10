@@ -46,6 +46,7 @@ export default function Login() {
                 placeholder='Username' 
                 onChange={(e) => setlocalUsername(e.target.value)}
                 value={username}
+                required
                 className='bg-[#1B1D28] w-full px-3 py-2 rounded-md border-2 border-[#444C55] focus:outline-none focus:border-[#6E88F9]'/>
 
                 <label className='mt-5'>Password</label>
@@ -57,6 +58,7 @@ export default function Login() {
                 placeholder='Password'
                 onChange={(e) => setPassword(e.target.value)}
                 value={password} 
+                required
                 className='bg-[#1B1D28] w-full px-3 py-2 rounded-md border-2 border-[#444C55] focus:outline-none focus:border-[#6E88F9]'/>
 
 
